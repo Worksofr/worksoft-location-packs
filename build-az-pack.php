@@ -1,153 +1,22 @@
 <?php
 /**
- * Azerbaycan örnek pack üretici (tek seferlik).
- * Çalıştır: php build-az-pack.php
+ * Azerbaycan konum paketi v1.1.0
+ * Büyük şehirler: ilçe + qəsəbə/kənd karışık (detaylı)
+ * Diğer rayonlar: Merkez + qəsəbə/kasaba (kənd yok)
+ *
+ * Kaynaklar: Azərbaycan Dövlət Statistika (inzibati təsnifat),
+ * bakucity.preslib.az, az.wikipedia.org qəsəbə siyahısı.
  */
 
 $locales = ['tr', 'en', 'ar', 'az', 'de', 'fr', 'ka', 'pl', 'ro', 'ru', 'uk'];
 
-// key => [az, en] — diğer diller az/en’den türetilir
-$rayons = [
-    'absheron' => ['Abşeron', 'Absheron'],
-    'agdam' => ['Ağdam', 'Agdam'],
-    'agdash' => ['Ağdaş', 'Agdash'],
-    'aghjabadi' => ['Ağcabədi', 'Aghjabadi'],
-    'agsu' => ['Ağsu', 'Agsu'],
-    'agstafa' => ['Ağstafa', 'Agstafa'],
-    'astara' => ['Astara', 'Astara'],
-    'babek' => ['Babək', 'Babek'],
-    'baku' => ['Bakı', 'Baku'],
-    'balakan' => ['Balakən', 'Balakan'],
-    'barda' => ['Bərdə', 'Barda'],
-    'beylagan' => ['Beyləqan', 'Beylagan'],
-    'bilasuvar' => ['Biləsuvar', 'Bilasuvar'],
-    'dashkasan' => ['Daşkəsən', 'Dashkasan'],
-    'fuzuli' => ['Füzuli', 'Fuzuli'],
-    'gadabay' => ['Gədəbəy', 'Gadabay'],
-    'ganja' => ['Gəncə', 'Ganja'],
-    'gobustan' => ['Qobustan', 'Gobustan'],
-    'goranboy' => ['Goranboy', 'Goranboy'],
-    'goychay' => ['Göyçay', 'Goychay'],
-    'goygol' => ['Göygöl', 'Goygol'],
-    'hajigabul' => ['Hacıqabul', 'Hajigabul'],
-    'imishli' => ['İmişli', 'Imishli'],
-    'ismailli' => ['İsmayıllı', 'Ismailli'],
-    'jabrayil' => ['Cəbrayıl', 'Jabrayil'],
-    'jalilabad' => ['Cəlilabad', 'Jalilabad'],
-    'julfa' => ['Culfa', 'Julfa'],
-    'kalbajar' => ['Kəlbəcər', 'Kalbajar'],
-    'kangarli' => ['Kəngərli', 'Kangarli'],
-    'khachmaz' => ['Xaçmaz', 'Khachmaz'],
-    'khankendi' => ['Xankəndi', 'Khankendi'],
-    'khizi' => ['Xızı', 'Khizi'],
-    'khojaly' => ['Xocalı', 'Khojaly'],
-    'khojavend' => ['Xocavənd', 'Khojavend'],
-    'kurdamir' => ['Kürdəmir', 'Kurdamir'],
-    'lachin' => ['Laçın', 'Lachin'],
-    'lankaran' => ['Lənkəran', 'Lankaran'],
-    'lerik' => ['Lerik', 'Lerik'],
-    'masally' => ['Masallı', 'Masally'],
-    'mingachevir' => ['Mingəçevir', 'Mingachevir'],
-    'naftalan' => ['Naftalan', 'Naftalan'],
-    'nakhchivan' => ['Naxçıvan', 'Nakhchivan'],
-    'neftchala' => ['Neftçala', 'Neftchala'],
-    'oghuz' => ['Oğuz', 'Oghuz'],
-    'ordubad' => ['Ordubad', 'Ordubad'],
-    'qabala' => ['Qəbələ', 'Gabala'],
-    'qakh' => ['Qax', 'Gakh'],
-    'qazakh' => ['Qazax', 'Gazakh'],
-    'quba' => ['Quba', 'Guba'],
-    'qubadli' => ['Qubadlı', 'Gubadli'],
-    'qusar' => ['Qusar', 'Gusar'],
-    'saatly' => ['Saatlı', 'Saatly'],
-    'sabirabad' => ['Sabirabad', 'Sabirabad'],
-    'sadarak' => ['Sədərək', 'Sadarak'],
-    'salyan' => ['Salyan', 'Salyan'],
-    'samukh' => ['Samux', 'Samukh'],
-    'shabran' => ['Şabran', 'Shabran'],
-    'shahbuz' => ['Şahbuz', 'Shahbuz'],
-    'shaki' => ['Şəki', 'Shaki'],
-    'shamakhi' => ['Şamaxı', 'Shamakhi'],
-    'shamkir' => ['Şəmkir', 'Shamkir'],
-    'sharur' => ['Şərur', 'Sharur'],
-    'shirvan' => ['Şirvan', 'Shirvan'],
-    'shusha' => ['Şuşa', 'Shusha'],
-    'siazan' => ['Siyəzən', 'Siazan'],
-    'sumqayit' => ['Sumqayıt', 'Sumgayit'],
-    'tartar' => ['Tərtər', 'Tartar'],
-    'tovuz' => ['Tovuz', 'Tovuz'],
-    'ujar' => ['Ucar', 'Ujar'],
-    'yardymli' => ['Yardımlı', 'Yardymli'],
-    'yevlakh' => ['Yevlax', 'Yevlakh'],
-    'zangilan' => ['Zəngilan', 'Zangilan'],
-    'zaqatala' => ['Zaqatala', 'Zaqatala'],
-    'zardab' => ['Zərdab', 'Zardab'],
-];
-
-$countryNames = [
-    'az' => 'Azərbaycan',
-    'tr' => 'Azerbaycan',
-    'en' => 'Azerbaijan',
-    'ar' => 'أذربيجان',
-    'de' => 'Aserbaidschan',
-    'fr' => 'Azerbaïdjan',
-    'ka' => 'აზერბაიჯანი',
-    'pl' => 'Azerbejdżan',
-    'ro' => 'Azerbaidjan',
-    'ru' => 'Азербайджан',
-    'uk' => 'Азербайджан',
-];
-
-$nationality = [
-    'az' => 'Azərbaycanlı',
-    'tr' => 'Azerbaycanlı',
-    'en' => 'Azerbaijani',
-    'ar' => 'أذربيجاني',
-    'de' => 'Aserbaidschaner',
-    'fr' => 'Azerbaïdjanais',
-    'ka' => 'აზერბაიჯანელი',
-    'pl' => 'Azerbejdżanin',
-    'ro' => 'Azerbaidjan',
-    'ru' => 'Азербайджанец',
-    'uk' => 'Азербайджанець',
-];
-
-function nameMap(string $az, string $en, array $locales): array
+function nm(string $az, string $en, array $locales, array $extra = []): array
 {
-    // Latin diller çoğunlukla EN; az/tr/ru özel
-    $tr = $az; // Azerbaycan adları TR’de genelde aynı yazım
-    $map = [
-        'az' => $az,
-        'tr' => $tr,
-        'en' => $en,
-        'de' => $en,
-        'fr' => $en,
-        'pl' => $en,
-        'ro' => $en,
-        'ka' => $en,
-        'ar' => $en,
-        'ru' => $az, // pratikte az adları da kullanılır; EN fallback ok
-        'uk' => $en,
-    ];
-    // Bilinen Rusça karşılıklar
-    $ruKnown = [
-        'Bakı' => 'Баку',
-        'Gəncə' => 'Гянджа',
-        'Sumqayıt' => 'Сумгаит',
-        'Naxçıvan' => 'Нахичевань',
-        'Lənkəran' => 'Ленкорань',
-        'Mingəçevir' => 'Мингечевир',
-        'Şəki' => 'Шеки',
-        'Şirvan' => 'Ширван',
-        'Yevlax' => 'Евлах',
-        'Şuşa' => 'Шуша',
-        'Xankəndi' => 'Ханкенди',
-    ];
-    if (isset($ruKnown[$az])) {
-        $map['ru'] = $ruKnown[$az];
-        $map['uk'] = $ruKnown[$az];
-    }
-
+    $map = array_merge([
+        'az' => $az, 'tr' => $az, 'en' => $en,
+        'de' => $en, 'fr' => $en, 'pl' => $en, 'ro' => $en, 'ka' => $en, 'ar' => $en,
+        'ru' => $extra['ru'] ?? $az, 'uk' => $extra['uk'] ?? ($extra['ru'] ?? $en),
+    ], $extra);
     $out = [];
     foreach ($locales as $loc) {
         $out[$loc] = $map[$loc] ?? $en;
@@ -156,27 +25,374 @@ function nameMap(string $az, string $en, array $locales): array
     return $out;
 }
 
+function city(string $key, string $az, string $en, array $locales, array $extra = []): array
+{
+    return ['key' => $key, 'name' => nm($az, $en, $locales, $extra)];
+}
+
+function citiesFromPairs(array $pairs, array $locales): array
+{
+    $out = [];
+    foreach ($pairs as $key => $pair) {
+        [$az, $en] = $pair;
+        $out[] = city($key, $az, $en, $locales);
+    }
+
+    return $out;
+}
+
+$countryNames = [
+    'az' => 'Azərbaycan', 'tr' => 'Azerbaycan', 'en' => 'Azerbaijan', 'ar' => 'أذربيجان',
+    'de' => 'Aserbaidschan', 'fr' => 'Azerbaïdjan', 'ka' => 'აზერბაიჯანი', 'pl' => 'Azerbejdżan',
+    'ro' => 'Azerbaidjan', 'ru' => 'Азербайджан', 'uk' => 'Азербайджан',
+];
+$nationality = [
+    'az' => 'Azərbaycanlı', 'tr' => 'Azerbaycanlı', 'en' => 'Azerbaijani', 'ar' => 'أذربيجاني',
+    'de' => 'Aserbaidschaner', 'fr' => 'Azerbaïdjanais', 'ka' => 'აზერბაიჯანელი', 'pl' => 'Azerbejdżanin',
+    'ro' => 'Azerbaidjan', 'ru' => 'Азербайджанец', 'uk' => 'Азербайджанець',
+];
+
+// --- Büyük şehirler (detaylı: rayon/ilçe + qəsəbə) ---
+$bakuDistricts = [
+    'binagadi' => ['Binəqədi', 'Binagadi'],
+    'garadagh' => ['Qaradağ', 'Garadagh'],
+    'khazar' => ['Xəzər', 'Khazar'],
+    'sabail' => ['Səbail', 'Sabail'],
+    'sabunchu' => ['Sabunçu', 'Sabunchu'],
+    'surakhani' => ['Suraxanı', 'Surakhani'],
+    'pirallahi' => ['Pirallahı', 'Pirallahi'],
+    'nizami' => ['Nizami', 'Nizami'],
+    'khatai' => ['Xətai', 'Khatai'],
+    'narimanov' => ['Nərimanov', 'Narimanov'],
+    'nasimi' => ['Nəsimi', 'Nasimi'],
+    'yasamal' => ['Yasamal', 'Yasamal'],
+];
+
+$bakuSettlements = [
+    // Binəqədi
+    'm-a-rasulzade' => ['M.Ə. Rəsulzadə', 'M.A. Rasulzade'],
+    'bileceri' => ['Biləcəri', 'Bilajari'],
+    'binagadi-q' => ['Binəqədi qəsəbə', 'Binagadi settlement'],
+    'khojasan' => ['Xocəsən', 'Khojasan'],
+    'sulutepe' => ['Sulutəpə', 'Sulutepe'],
+    '28-may' => ['28 May', '28 May'],
+    // Xətai
+    'ahmadli' => ['Əhmədli', 'Ahmadli'],
+    // Xəzər
+    'shuvelan' => ['Şüvəlan', 'Shuvelan'],
+    'bina' => ['Binə', 'Bina'],
+    'buzovna' => ['Buzovna', 'Buzovna'],
+    'qala' => ['Qala', 'Gala'],
+    'mardakan' => ['Mərdəkan', 'Mardakan'],
+    'shagan' => ['Şağan', 'Shagan'],
+    'turkan' => ['Türkan', 'Turkan'],
+    'zira' => ['Zirə', 'Zira'],
+    // Qaradağ
+    'lokbatan' => ['Lökbatan', 'Lokbatan'],
+    'heibat' => ['Heybət', 'Heybat'],
+    'shubani' => ['Şubanı', 'Shubani'],
+    'cheyildag' => ['Çeyildağ', 'Cheyildagh'],
+    'alat' => ['Ələt', 'Alat'],
+    'bash-alat' => ['Baş Ələt', 'Bash Alat'],
+    'kotal' => ['Kotal', 'Kotal'],
+    'garakosa' => ['Qarakosa', 'Garakosa'],
+    'pirsaat' => ['Pirsaat', 'Pirsaat'],
+    'shikhlar' => ['Şıxlar', 'Shikhlar'],
+    'yeni-alat' => ['Yeni Ələt', 'Yeni Alat'],
+    'korgoz' => ['Korgöz', 'Korgoz'],
+    'gyzildash' => ['Qızıldaş', 'Gizildash'],
+    'shongar' => ['Şonqar', 'Shongar'],
+    'gobustan-q' => ['Qobustan (Qaradağ)', 'Gobustan (Garadagh)'],
+    'mushvigabad' => ['Müşfiqabad', 'Mushfigabad'],
+    'puta' => ['Puta', 'Puta'],
+    'sahil' => ['Sahil', 'Sahil'],
+    'garadagh-q' => ['Qaradağ qəsəbə', 'Garadagh settlement'],
+    'sangachal' => ['Sanqaçal', 'Sangachal'],
+    'umid' => ['Ümid', 'Umid'],
+    // Nizami
+    'keshla' => ['Keşlə', 'Keshla'],
+    // Pirallahı
+    'pirallahi-q' => ['Pirallahı qəsəbə', 'Pirallahi settlement'],
+    'chilov' => ['Çilov', 'Chilov'],
+    'gurgan' => ['Gürgən', 'Gurgan'],
+    'neft-dashlari' => ['Neft Daşları', 'Oil Rocks'],
+    // Sabunçu
+    'bakikhanov' => ['Bakıxanov', 'Bakikhanov'],
+    'balakhani' => ['Balaxanı', 'Balakhani'],
+    'bilgah' => ['Bilgəh', 'Bilgah'],
+    'kurdakhani' => ['Kürdəxanı', 'Kurdakhani'],
+    'mashtaga' => ['Maştağa', 'Mashtaga'],
+    'nardaran' => ['Nardaran', 'Nardaran'],
+    'pirshagi' => ['Pirşağı', 'Pirshagi'],
+    'ramana' => ['Ramana', 'Ramana'],
+    'sabunchu-q' => ['Sabunçu qəsəbə', 'Sabunchu settlement'],
+    'zabrat' => ['Zabrat', 'Zabrat'],
+    // Səbail
+    'badamdar' => ['Badamdar', 'Badamdar'],
+    'bibiheybat' => ['Bibiheybət', 'Bibiheybat'],
+    // Suraxanı
+    'amircan' => ['Əmircan', 'Amircan'],
+    'bulbule' => ['Bülbülə', 'Bulbule'],
+    'hovsan' => ['Hövsan', 'Hovsan'],
+    'garachukhur' => ['Qaraçuxur', 'Garachukhur'],
+    'yeni-surakhani' => ['Yeni Suraxanı', 'Yeni Surakhani'],
+    'zig' => ['Zığ', 'Zig'],
+];
+
+$major = [];
+
+// Bakı
+$bakuCities = array_merge(
+    [city('merkez', 'Merkez', 'Center', $locales, ['ru' => 'Центр'])],
+    citiesFromPairs($bakuDistricts, $locales),
+    citiesFromPairs($bakuSettlements, $locales)
+);
+$major['baku'] = [
+    'name' => nm('Bakı', 'Baku', $locales, ['ru' => 'Баку', 'uk' => 'Баку', 'tr' => 'Bakı']),
+    'cities' => $bakuCities,
+];
+
+// Gəncə
+$major['ganja'] = [
+    'name' => nm('Gəncə', 'Ganja', $locales, ['ru' => 'Гянджа', 'uk' => 'Гянджа']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+        'kapaz' => ['Kəpəz', 'Kapaz'],
+        'nizami-g' => ['Nizami (Gəncə)', 'Nizami (Ganja)'],
+        'javadkhan' => ['Cavadxan', 'Javadkhan'],
+        'hacikand' => ['Hacıkənd', 'Hajikand'],
+        'goygol-q' => ['Göygöl qəsəbə', 'Goygol settlement'],
+        'mahseti' => ['Məhsəti', 'Mahsati'],
+        'natavan' => ['Natəvan', 'Natavan'],
+        'sadilli' => ['Sadıllı', 'Sadilli'],
+        'shikhzamanli' => ['Şıxzamanlı', 'Shikhzamanli'],
+    ], $locales),
+];
+
+// Sumqayıt
+$major['sumqayit'] = [
+    'name' => nm('Sumqayıt', 'Sumgayit', $locales, ['ru' => 'Сумгаит', 'uk' => 'Сумгаїт']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+        'jorat' => ['Corat', 'Jorat'],
+        'haci-zeynalabdin' => ['Hacı Zeynalabdin', 'Haji Zeynalabdin'],
+    ], $locales),
+];
+
+// Mingəçevir
+$major['mingachevir'] = [
+    'name' => nm('Mingəçevir', 'Mingachevir', $locales, ['ru' => 'Мингечевир']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+    ], $locales),
+];
+
+// Şirvan
+$major['shirvan'] = [
+    'name' => nm('Şirvan', 'Shirvan', $locales, ['ru' => 'Ширван']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+        'bayramli' => ['Bayramlı', 'Bayramli'],
+        'haciqahramanli' => ['Hacıqəhrəmanlı', 'Hajigahramanli'],
+    ], $locales),
+];
+
+// Naxçıvan şəhəri
+$major['nakhchivan'] = [
+    'name' => nm('Naxçıvan', 'Nakhchivan', $locales, ['ru' => 'Нахичевань']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+        'aliabad' => ['Əliabad', 'Aliabad'],
+    ], $locales),
+];
+
+// Lənkəran şəhəri
+$major['lankaran'] = [
+    'name' => nm('Lənkəran', 'Lankaran', $locales, ['ru' => 'Ленкорань']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+        'liman' => ['Liman', 'Liman'],
+        'garmatuk' => ['Gərmətük', 'Garmatuk'],
+        'shirinsu' => ['Şirinsu', 'Shirinsu'],
+        'vel' => ['Vel', 'Vel'],
+        'sutamurdov' => ['Sutəmurdov', 'Sutamurdov'],
+    ], $locales),
+];
+
+// Şəki şəhəri
+$major['shaki'] = [
+    'name' => nm('Şəki', 'Shaki', $locales, ['ru' => 'Шеки']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+        'kish' => ['Kiş', 'Kish'],
+        'okhud' => ['Oxud', 'Okhud'],
+        'turan' => ['Turan', 'Turan'],
+        'inqiloy' => ['İnçə', 'Incha'],
+    ], $locales),
+];
+
+// Yevlax şəhəri
+$major['yevlakh'] = [
+    'name' => nm('Yevlax', 'Yevlakh', $locales, ['ru' => 'Евлах']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+        'aran' => ['Aran', 'Aran'],
+        'qoyunbinasi' => ['Qoyunbinəsi', 'Goyunbinesi'],
+    ], $locales),
+];
+
+// Naftalan
+$major['naftalan'] = [
+    'name' => nm('Naftalan', 'Naftalan', $locales, ['ru' => 'Нафталан']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+        'qashalti' => ['Qaşıaltı', 'Gashalti'],
+        'eskiqala' => ['Eskiqala', 'Eskigala'],
+    ], $locales),
+];
+
+// Şuşa şəhəri
+$major['shusha'] = [
+    'name' => nm('Şuşa', 'Shusha', $locales, ['ru' => 'Шуша']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+    ], $locales),
+];
+
+// Xankəndi
+$major['khankendi'] = [
+    'name' => nm('Xankəndi', 'Khankendi', $locales, ['ru' => 'Ханкенди']),
+    'cities' => citiesFromPairs([
+        'merkez' => ['Merkez', 'Center'],
+    ], $locales),
+];
+
+// --- Diğer rayonlar: Merkez + qəsəbə/kasaba (kənd yok) ---
+$lightRayons = [
+    'absheron' => ['Abşeron', 'Absheron', [
+        'merkez' => ['Merkez (Xırdalan)', 'Center (Khirdalan)'],
+        'khirdalan' => ['Xırdalan', 'Khirdalan'],
+        'mehdiabad' => ['Mehdiabad', 'Mehdiabad'],
+        'saray' => ['Saray', 'Saray'],
+        'ceyranbatan' => ['Ceyranbatan', 'Jeyranbatan'],
+        'digah' => ['Digah', 'Digah'],
+        'fatmai' => ['Fatmayı', 'Fatmai'],
+        'goradil' => ['Görədil', 'Goradil'],
+        'hokmali' => ['Hökümdarlı', 'Hokmali'],
+        'mashaga' => ['Məmmədli', 'Mammadli'],
+        'new-surakhani-a' => ['Yeni Suraxanı', 'Yeni Surakhani'],
+        'pirakashkul' => ['Pirəkəşkül', 'Pirakashkul'],
+    ]],
+    'agdam' => ['Ağdam', 'Agdam', ['merkez' => ['Merkez', 'Center'], 'quzanli' => ['Quzanlı', 'Guzanli']]],
+    'agdash' => ['Ağdaş', 'Agdash', ['merkez' => ['Merkez', 'Center'], 'kosha' => ['Köşə', 'Kosha'], 'yukhari-zeyid' => ['Yuxarı Zeynəddin', 'Yukhari Zeynaddin']]],
+    'aghjabadi' => ['Ağcabədi', 'Aghjabadi', ['merkez' => ['Merkez', 'Center'], 'hindarx' => ['Hindərx', 'Hindarkh']]],
+    'agsu' => ['Ağsu', 'Agsu', ['merkez' => ['Merkez', 'Center']]],
+    'agstafa' => ['Ağstafa', 'Agstafa', ['merkez' => ['Merkez', 'Center'], 'vurgun' => ['Vurğun', 'Vurgun'], 'poylu' => ['Poylu', 'Poylu']]],
+    'astara' => ['Astara', 'Astara', ['merkez' => ['Merkez', 'Center'], 'erzinke' => ['Kijəbə', 'Kijaba'], 'archivan' => ['Ərçivan', 'Archivan']]],
+    'babek' => ['Babək', 'Babek', ['merkez' => ['Merkez', 'Center'], 'nehram' => ['Nehrəm', 'Nehram'], 'jahri' => ['Cahri', 'Jahri']]],
+    'balakan' => ['Balakən', 'Balakan', ['merkez' => ['Merkez', 'Center'], 'katex' => ['Katex', 'Katekh'], 'mahallar' => ['Mahamalar', 'Mahamalar']]],
+    'barda' => ['Bərdə', 'Barda', ['merkez' => ['Merkez', 'Center'], 'soylu' => ['Soğulcan', 'Sogulcan']]],
+    'beylagan' => ['Beyləqan', 'Beylagan', ['merkez' => ['Merkez', 'Center'], 'duzqaraqoyunlu' => ['Düzqaraqoyunlu', 'Duzgaragoyunlu']]],
+    'bilasuvar' => ['Biləsuvar', 'Bilasuvar', ['merkez' => ['Merkez', 'Center']]],
+    'dashkasan' => ['Daşkəsən', 'Dashkasan', ['merkez' => ['Merkez', 'Center'], 'quşçu' => ['Quşçu', 'Gushchu'], 'alunitdag' => ['Alunitdağ', 'Alunitdag']]],
+    'fuzuli' => ['Füzuli', 'Fuzuli', ['merkez' => ['Merkez', 'Center'], 'horadiz' => ['Horadiz', 'Horadiz']]],
+    'gadabay' => ['Gədəbəy', 'Gadabay', ['merkez' => ['Merkez', 'Center'], 'soyudlu' => ['Soyudlu', 'Soyudlu'], 'slavyanka' => ['Slavyanka', 'Slavyanka']]],
+    'gobustan' => ['Qobustan', 'Gobustan', ['merkez' => ['Merkez', 'Center']]],
+    'goranboy' => ['Goranboy', 'Goranboy', ['merkez' => ['Merkez', 'Center'], 'dalimammadli' => ['Dəliməmmədli', 'Dalimammadli'], 'gizilhajili' => ['Qızılhacılı', 'Gizilhajili']]],
+    'goychay' => ['Göyçay', 'Goychay', ['merkez' => ['Merkez', 'Center']]],
+    'goygol' => ['Göygöl', 'Goygol', ['merkez' => ['Merkez', 'Center'], 'hajikend' => ['Hacıkənd', 'Hajikend'], 'kurekchay' => ['Kürəkçay', 'Kurekchay']]],
+    'hajigabul' => ['Hacıqabul', 'Hajigabul', ['merkez' => ['Merkez', 'Center'], 'mugan' => ['Muğan', 'Mugan'], 'navahi' => ['Navahi', 'Navahi']]],
+    'imishli' => ['İmişli', 'Imishli', ['merkez' => ['Merkez', 'Center'], 'bahar' => ['Bahar', 'Bahar']]],
+    'ismailli' => ['İsmayıllı', 'Ismailli', ['merkez' => ['Merkez', 'Center'], 'basgal' => ['Basqal', 'Basgal'], 'lahic' => ['Lahıc', 'Lahij']]],
+    'jabrayil' => ['Cəbrayıl', 'Jabrayil', ['merkez' => ['Merkez', 'Center']]],
+    'jalilabad' => ['Cəlilabad', 'Jalilabad', ['merkez' => ['Merkez', 'Center'], 'goytepe' => ['Göytəpə', 'Goytepe'], 'privolnoye' => ['Privolnoye', 'Privolnoye']]],
+    'julfa' => ['Culfa', 'Julfa', ['merkez' => ['Merkez', 'Center'], 'haydarabad' => ['Heydərabad', 'Heydarabad']]],
+    'kalbajar' => ['Kəlbəcər', 'Kalbajar', ['merkez' => ['Merkez', 'Center'], 'istiklal' => ['İstisu', 'Istisu']]],
+    'kangarli' => ['Kəngərli', 'Kangarli', ['merkez' => ['Merkez', 'Center'], 'givrag' => ['Qıvraq', 'Givrag']]],
+    'khachmaz' => ['Xaçmaz', 'Khachmaz', ['merkez' => ['Merkez', 'Center'], 'xudat' => ['Xudat', 'Khudat'], 'samur' => ['Samurçay', 'Samurchay'], 'yalama' => ['Yalama', 'Yalama']]],
+    'khizi' => ['Xızı', 'Khizi', ['merkez' => ['Merkez', 'Center'], 'altiqash' => ['Altiağac', 'Altiagach'], 'shurabad' => ['Şuraabad', 'Shurabad']]],
+    'khojaly' => ['Xocalı', 'Khojaly', ['merkez' => ['Merkez', 'Center']]],
+    'khojavend' => ['Xocavənd', 'Khojavend', ['merkez' => ['Merkez', 'Center'], 'hadrut' => ['Hadrut', 'Hadrut']]],
+    'kurdamir' => ['Kürdəmir', 'Kurdamir', ['merkez' => ['Merkez', 'Center']]],
+    'lachin' => ['Laçın', 'Lachin', ['merkez' => ['Merkez', 'Center'], 'gulebird' => ['Qarıqışlaq', 'Garigishlag']]],
+    'lankaran-rayon' => ['Lənkəran rayonu', 'Lankaran District', [
+        'merkez' => ['Merkez', 'Center'],
+        'hirkan' => ['Hirkan', 'Hirkan'],
+        'narimanabad' => ['Nərimanabad', 'Narimanabad'],
+        'ashagi-nuvedi' => ['Aşağı Nuvədi', 'Ashagi Nuvedi'],
+    ]],
+    'lerik' => ['Lerik', 'Lerik', ['merkez' => ['Merkez', 'Center']]],
+    'masally' => ['Masallı', 'Masally', ['merkez' => ['Merkez', 'Center'], 'boradigah' => ['Boradigah', 'Boradigah'], 'arkivan' => ['Ərkivan', 'Arkivan']]],
+    'neftchala' => ['Neftçala', 'Neftchala', ['merkez' => ['Merkez', 'Center'], 'bank' => ['Bankə', 'Banka'], 'hasilli' => ['Həsənabad', 'Hasanabad']]],
+    'oghuz' => ['Oğuz', 'Oghuz', ['merkez' => ['Merkez', 'Center']]],
+    'ordubad' => ['Ordubad', 'Ordubad', ['merkez' => ['Merkez', 'Center'], 'paraqa' => ['Parağa', 'Paraga'], 'sabirkand' => ['Sabirkənd', 'Sabirkand']]],
+    'qabala' => ['Qəbələ', 'Gabala', ['merkez' => ['Merkez', 'Center'], 'vandam' => ['Vəndam', 'Vandam'], 'nij' => ['Nic', 'Nij'], 'bick' => ['Bıççaqçı', 'Bichagchi']]],
+    'qakh' => ['Qax', 'Gakh', ['merkez' => ['Merkez', 'Center'], 'ilisu' => ['İlisu', 'Ilisu'], 'qaxingiloy' => ['Qaxingiloy', 'Gakhingiloy']]],
+    'qazakh' => ['Qazax', 'Gazakh', ['merkez' => ['Merkez', 'Center'], 'ashagi-salahli' => ['Aşağı Salahlı', 'Ashagi Salahli']]],
+    'quba' => ['Quba', 'Guba', ['merkez' => ['Merkez', 'Center'], 'qonalqala' => ['Qonalqala', 'Gonalgala'], 'red-settlement' => ['Qırmızı Qəsəbə', 'Red Town'], 'davachi' => ['Zizik', 'Zizik']]],
+    'qubadli' => ['Qubadlı', 'Gubadli', ['merkez' => ['Merkez', 'Center']]],
+    'qusar' => ['Qusar', 'Gusar', ['merkez' => ['Merkez', 'Center'], 'samur' => ['Samur', 'Samur'], 'haci-zeynalabdin-q' => ['Hacı Zeynalabdin', 'Haji Zeynalabdin']]],
+    'saatly' => ['Saatlı', 'Saatly', ['merkez' => ['Merkez', 'Center']]],
+    'sabirabad' => ['Sabirabad', 'Sabirabad', ['merkez' => ['Merkez', 'Center'], 'galagayin' => ['Qalağayın', 'Galagayin'], 'muradxan' => ['Muradxanlı', 'Muradkhanli']]],
+    'sadarak' => ['Sədərək', 'Sadarak', ['merkez' => ['Merkez', 'Center'], 'heydarabad' => ['Heydərabad', 'Heydarabad']]],
+    'salyan' => ['Salyan', 'Salyan', ['merkez' => ['Merkez', 'Center'], 'gizilagac' => ['Qızılağac', 'Gizilagaj'], 'severo-vostok' => ['Şorsulu', 'Shorsulu']]],
+    'samukh' => ['Samux', 'Samukh', ['merkez' => ['Merkez', 'Center'], 'karyagin' => ['Qarayeri', 'Garayeri']]],
+    'shabran' => ['Şabran', 'Shabran', ['merkez' => ['Merkez', 'Center'], 'adam' => ['Adam', 'Adam']]],
+    'shahbuz' => ['Şahbuz', 'Shahbuz', ['merkez' => ['Merkez', 'Center'], 'badamli' => ['Badamlı', 'Badamli']]],
+    'shaki-rayon' => ['Şəki rayonu', 'Shaki District', [
+        'merkez' => ['Merkez', 'Center'],
+        'bash-keldek' => ['Baş Kəldək', 'Bash Keldek'],
+        'oxud' => ['Oxud', 'Okhud'],
+    ]],
+    'shamakhi' => ['Şamaxı', 'Shamakhi', ['merkez' => ['Merkez', 'Center'], 'sabir' => ['Sabir', 'Sabir'], 'melham' => ['Mədrəsə', 'Madrasa']]],
+    'shamkir' => ['Şəmkir', 'Shamkir', ['merkez' => ['Merkez', 'Center'], 'dolyar' => ['Dəllər', 'Dallar'], 'kurekchay' => ['Kura', 'Kura'], 'chumakli' => ['Çinarlı', 'Chinarli']]],
+    'sharur' => ['Şərur', 'Sharur', ['merkez' => ['Merkez', 'Center'], 'duzgeh' => ['Düzkənd', 'Duzkend'], 'maharramkend' => ['Mağaraçuğ', 'Magarachug']]],
+    'shusha-rayon' => ['Şuşa rayonu', 'Shusha District', ['merkez' => ['Merkez', 'Center']]],
+    'siazan' => ['Siyəzən', 'Siazan', ['merkez' => ['Merkez', 'Center'], 'gilazi' => ['Giləzi', 'Gilazi']]],
+    'tartar' => ['Tərtər', 'Tartar', ['merkez' => ['Merkez', 'Center'], 'shikharkh' => ['Şıxarx', 'Shikharkh']]],
+    'tovuz' => ['Tovuz', 'Tovuz', ['merkez' => ['Merkez', 'Center'], 'qovlar' => ['Qovlar', 'Govlar'], 'ashagi-quşçu' => ['Aşağı Quşçu', 'Ashagi Gushchu']]],
+    'ujar' => ['Ucar', 'Ujar', ['merkez' => ['Merkez', 'Center']]],
+    'yardymli' => ['Yardımlı', 'Yardymli', ['merkez' => ['Merkez', 'Center']]],
+    'yevlakh-rayon' => ['Yevlax rayonu', 'Yevlakh District', ['merkez' => ['Merkez', 'Center']]],
+    'zangilan' => ['Zəngilan', 'Zangilan', ['merkez' => ['Merkez', 'Center'], 'minjivan' => ['Mincivan', 'Minjivan']]],
+    'zaqatala' => ['Zaqatala', 'Zaqatala', ['merkez' => ['Merkez', 'Center'], 'aliabad-z' => ['Əliabad', 'Aliabad'], 'muxax' => ['Muxax', 'Mukhakh']]],
+    'zardab' => ['Zərdab', 'Zardab', ['merkez' => ['Merkez', 'Center']]],
+];
+
 $states = [];
-foreach ($rayons as $key => [$az, $en]) {
-    $names = nameMap($az, $en, $locales);
+foreach ($major as $key => $row) {
     $states[] = [
         'key' => $key,
-        'name' => $names,
-        'cities' => [
-            [
-                'key' => $key,
-                'name' => $names,
-            ],
-        ],
+        'name' => $row['name'],
+        'detail_level' => 'major_city',
+        'cities' => $row['cities'],
     ];
+}
+
+foreach ($lightRayons as $key => [$az, $en, $cityPairs]) {
+    $states[] = [
+        'key' => $key,
+        'name' => nm($az, $en, $locales),
+        'detail_level' => 'rayon_light',
+        'cities' => citiesFromPairs($cityPairs, $locales),
+    ];
+}
+
+$cityCount = 0;
+foreach ($states as $s) {
+    $cityCount += count($s['cities']);
 }
 
 $pack = [
     'id' => 'az',
     'iso2' => 'AZ',
     'code' => 'AZE',
-    'version' => '1.0.0',
+    'version' => '1.1.0',
     'default_locale' => 'az',
+    'notes' => [
+        'tr' => 'Büyük şehirler (Bakı, Gəncə, Sumqayıt…): ilçe + qəsəbə detaylı. Diğer rayonlar: Merkez + kasaba/qəsəbə (kənd yok).',
+        'en' => 'Major cities: districts + settlements. Other rayons: center + towns (no villages).',
+    ],
     'country' => [
         'name' => $countryNames,
         'nationality' => $nationality,
@@ -189,31 +405,28 @@ if (! is_dir($dir)) {
     mkdir($dir, 0777, true);
 }
 
-$json = json_encode($pack, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_THROW_ON_ERROR);
-file_put_contents($dir.'/locations.json', $json."\n");
+file_put_contents($dir.'/locations.json', json_encode($pack, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)."\n");
 file_put_contents($dir.'/pack.json', json_encode([
     'id' => 'az',
-    'version' => '1.0.0',
+    'version' => '1.1.0',
     'iso2' => 'AZ',
     'code' => 'AZE',
-], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)."\n");
+], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)."\n");
 
 $manifest = [
     'version' => 1,
-    'packs' => [
-        [
-            'id' => 'az',
-            'iso2' => 'AZ',
-            'code' => 'AZE',
-            'version' => '1.0.0',
-            'default_locale' => 'az',
-            'path' => 'packs/az/locations.json',
-            'states_count' => count($states),
-            'cities_count' => count($states),
-            'name' => $countryNames,
-        ],
-    ],
+    'packs' => [[
+        'id' => 'az',
+        'iso2' => 'AZ',
+        'code' => 'AZE',
+        'version' => '1.1.0',
+        'default_locale' => 'az',
+        'path' => 'packs/az/locations.json',
+        'states_count' => count($states),
+        'cities_count' => $cityCount,
+        'name' => $countryNames,
+    ]],
 ];
 file_put_contents(__DIR__.'/manifest.json', json_encode($manifest, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)."\n");
 
-echo 'OK states='.count($states).' bytes='.strlen($json).PHP_EOL;
+echo 'OK states='.count($states).' cities='.$cityCount."\n";
