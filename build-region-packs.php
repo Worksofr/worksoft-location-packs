@@ -215,9 +215,10 @@ foreach ($countriesMeta as $meta) {
         mkdir($outDir, 0755, true);
     }
 
+    $locationsPath = $outDir.'/locations.json';
     // Compact JSON (büyük ülkeler için boyut)
     file_put_contents(
-        $outDir.'/locations.json',
+        $locationsPath,
         json_encode($pack, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)."\n"
     );
     file_put_contents(
@@ -230,6 +231,9 @@ foreach ($countriesMeta as $meta) {
         ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n"
     );
 
+    $fileBytes = (int) filesize($locationsPath);
+    $estimateDisk = 4096 + (count($packStates) * 400) + ($citiesTotal * 450) + 2048;
+
     $generated[] = [
         'id' => $id,
         'iso2' => $iso2,
@@ -239,10 +243,12 @@ foreach ($countriesMeta as $meta) {
         'path' => 'packs/'.$id.'/locations.json',
         'states_count' => count($packStates),
         'cities_count' => $citiesTotal,
+        'file_bytes' => $fileBytes,
+        'estimate_disk_bytes' => $estimateDisk,
         'name' => $meta['name'],
     ];
 
-    $sizeMb = round(filesize($outDir.'/locations.json') / 1048576, 2);
+    $sizeMb = round($fileBytes / 1048576, 2);
     echo "OK $iso2 states=".count($packStates)." cities=$citiesTotal size={$sizeMb}MB\n";
 }
 

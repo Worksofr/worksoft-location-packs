@@ -22,7 +22,9 @@
                 "ro": "Azerbaidjan",
                 "ru": "Азербайджан",
                 "uk": "Азербайджан"
-            }
+            },
+            "file_bytes": 201777,
+            "estimate_disk_bytes": 159294
         },
         {
             "id": "tr",
@@ -45,7 +47,9 @@
                 "ro": "Turcia",
                 "ru": "Турция",
                 "uk": "Туреччина"
-            }
+            },
+            "file_bytes": 177401,
+            "estimate_disk_bytes": 476844
         },
         {
             "id": "ae",
@@ -68,7 +72,9 @@
                 "ro": "Emiratele Arabe Unite",
                 "ru": "Объединённые Арабские Эмираты",
                 "uk": "Об'єднані Арабські Емірати"
-            }
+            },
+            "file_bytes": 2862,
+            "estimate_disk_bytes": 22444
         },
         {
             "id": "at",
@@ -91,7 +97,9 @@
                 "ro": "Austria",
                 "ru": "Австрия",
                 "uk": "Австрія"
-            }
+            },
+            "file_bytes": 124852,
+            "estimate_disk_bytes": 1071744
         },
         {
             "id": "be",
@@ -114,7 +122,9 @@
                 "ro": "Belgia",
                 "ru": "Бельгия",
                 "uk": "Бельгія"
-            }
+            },
+            "file_bytes": 26900,
+            "estimate_disk_bytes": 262894
         },
         {
             "id": "bg",
@@ -137,7 +147,9 @@
                 "ro": "Bulgaria",
                 "ru": "Болгария",
                 "uk": "Болгарія"
-            }
+            },
+            "file_bytes": 28890,
+            "estimate_disk_bytes": 244144
         },
         {
             "id": "cy",
@@ -160,7 +172,9 @@
                 "ro": "Cipru",
                 "ru": "Кипр",
                 "uk": "Кіпр"
-            }
+            },
+            "file_bytes": 5488,
+            "estimate_disk_bytes": 51294
         },
         {
             "id": "cz",
@@ -183,7 +197,9 @@
                 "ro": "Republica Cehă",
                 "ru": "Чехия",
                 "uk": "Чеська Республіка"
-            }
+            },
+            "file_bytes": 75092,
+            "estimate_disk_bytes": 686094
         },
         {
             "id": "de",
@@ -206,7 +222,9 @@
                 "ro": "Germania",
                 "ru": "Германия",
                 "uk": "Німеччина"
-            }
+            },
+            "file_bytes": 340144,
+            "estimate_disk_bytes": 3209344
         },
         {
             "id": "dk",
@@ -229,7 +247,9 @@
                 "ro": "Danemarca",
                 "ru": "Дания",
                 "uk": "Данія"
-            }
+            },
+            "file_bytes": 21390,
+            "estimate_disk_bytes": 201644
         },
         {
             "id": "ee",
@@ -252,7 +272,9 @@
                 "ro": "Estonia",
                 "ru": "Эстония",
                 "uk": "Естонія"
-            }
+            },
+            "file_bytes": 16149,
+            "estimate_disk_bytes": 152194
         },
         {
             "id": "es",
@@ -275,7 +297,9 @@
                 "ro": "Spania",
                 "ru": "Испания",
                 "uk": "Іспанія"
-            }
+            },
+            "file_bytes": 448024,
+            "estimate_disk_bytes": 3824544
         },
         {
             "id": "fi",
@@ -298,7 +322,9 @@
                 "ro": "Finlanda",
                 "ru": "Финляндия",
                 "uk": "Фінляндія"
-            }
+            },
+            "file_bytes": 20983,
+            "estimate_disk_bytes": 210444
         },
         {
             "id": "fr",
@@ -321,7 +347,9 @@
                 "ro": "Franța",
                 "ru": "Франция",
                 "uk": "Франція"
-            }
+            },
+            "file_bytes": 560008,
+            "estimate_disk_bytes": 4807294
         },
         {
             "id": "ge",
@@ -344,7 +372,9 @@
                 "ro": "Georgia",
                 "ru": "Грузия",
                 "uk": "Грузія"
-            }
+            },
+            "file_bytes": 7248,
+            "estimate_disk_bytes": 60444
         },
         {
             "id": "gr",
@@ -367,7 +397,9 @@
                 "ro": "Grecia",
                 "ru": "Греция",
                 "uk": "Греція"
-            }
+            },
+            "file_bytes": 52950,
+            "estimate_disk_bytes": 509394
         },
         {
             "id": "hr",
@@ -390,7 +422,9 @@
                 "ro": "Croația",
                 "ru": "Хорватия",
                 "uk": "Хорватія"
-            }
+            },
+            "file_bytes": 32663,
+            "estimate_disk_bytes": 312944
         },
         {
             "id": "hu",
@@ -413,7 +447,9 @@
                 "ro": "Ungaria",
                 "ru": "Венгрия",
                 "uk": "Угорщина"
-            }
+            },
+            "file_bytes": 56694,
+            "estimate_disk_bytes": 516994
         },
         {
             "id": "ie",
@@ -436,7 +472,9 @@
                 "ro": "Irlanda",
                 "ru": "Ирландия",
                 "uk": "Ірландія"
-            }
+            },
+            "file_bytes": 20320,
+            "estimate_disk_bytes": 196344
         },
         {
             "id": "it",
@@ -459,7 +497,9 @@
                 "ro": "Italia",
                 "ru": "Италия",
                 "uk": "Італія"
-            }
+            },
+            "file_bytes": 501948,
+            "estimate_disk_bytes": 4498494
         },
         {
             "id": "lt",
@@ -482,7 +522,9 @@
                 "ro": "Lituania",
                 "ru": "Литва",
                 "uk": "Литва"
-            }
+            },
+            "file_bytes": 13353,
+            "estimate_disk_bytes": 118744
         },
         {
             "id": "lu",
@@ -505,7 +547,9 @@
                 "ro": "Luxemburg",
                 "ru": "Люксембург",
                 "uk": "Люксембург"
-            }
+            },
+            "file_bytes": 8147,
+            "estimate_disk_bytes": 75744
         },
         {
             "id": "lv",
@@ -528,7 +572,9 @@
                 "ro": "Letonia",
                 "ru": "Латвия",
                 "uk": "Латвія"
-            }
+            },
+            "file_bytes": 8356,
+            "estimate_disk_bytes": 80044
         },
         {
             "id": "mt",
@@ -551,7 +597,9 @@
                 "ro": "Malta",
                 "ru": "Мальта",
                 "uk": "Мальта"
-            }
+            },
+            "file_bytes": 8403,
+            "estimate_disk_bytes": 75194
         },
         {
             "id": "nl",
@@ -574,7 +622,9 @@
                 "ro": "Țările de Jos",
                 "ru": "Нидерланды",
                 "uk": "Нідерланди"
-            }
+            },
+            "file_bytes": 77176,
+            "estimate_disk_bytes": 750744
         },
         {
             "id": "pl",
@@ -597,7 +647,9 @@
                 "ro": "Polonia",
                 "ru": "Польша",
                 "uk": "Польща"
-            }
+            },
+            "file_bytes": 132052,
+            "estimate_disk_bytes": 1277044
         },
         {
             "id": "pt",
@@ -620,7 +672,9 @@
                 "ro": "Portugalia",
                 "ru": "Португалия",
                 "uk": "Португалія"
-            }
+            },
+            "file_bytes": 65775,
+            "estimate_disk_bytes": 597344
         },
         {
             "id": "ro",
@@ -643,7 +697,9 @@
                 "ro": "România",
                 "ru": "Румыния",
                 "uk": "Румунія"
-            }
+            },
+            "file_bytes": 405536,
+            "estimate_disk_bytes": 3599994
         },
         {
             "id": "se",
@@ -666,7 +722,9 @@
                 "ro": "Suedia",
                 "ru": "Швеция",
                 "uk": "Швеція"
-            }
+            },
+            "file_bytes": 37036,
+            "estimate_disk_bytes": 374994
         },
         {
             "id": "si",
@@ -689,7 +747,9 @@
                 "ro": "Slovenia",
                 "ru": "Словения",
                 "uk": "Словенія"
-            }
+            },
+            "file_bytes": 28439,
+            "estimate_disk_bytes": 235844
         },
         {
             "id": "sk",
@@ -712,7 +772,9 @@
                 "ro": "Slovacia",
                 "ru": "Словакия",
                 "uk": "Словаччина"
-            }
+            },
+            "file_bytes": 13048,
+            "estimate_disk_bytes": 114194
         },
         {
             "id": "sy",
@@ -735,7 +797,9 @@
                 "ro": "Siria",
                 "ru": "Сирия",
                 "uk": "Сирія"
-            }
+            },
+            "file_bytes": 8075,
+            "estimate_disk_bytes": 75644
         },
         {
             "id": "ua",
@@ -758,7 +822,9 @@
                 "ro": "Ucraina",
                 "ru": "Украина",
                 "uk": "Україна"
-            }
+            },
+            "file_bytes": 90306,
+            "estimate_disk_bytes": 835494
         }
     ]
 }
