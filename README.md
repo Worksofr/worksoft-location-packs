@@ -22,7 +22,8 @@ packs/<id>/
 | `az` | Özel Azerbaycan hiyerarşisi (ilçe + qəsəbə) |
 | `tr` | Türkiye il + ilçe |
 | `ua` | Ukrayna — Kiril adlar (`enrich-ua-cyrillic.php` + Geonames) |
-| AB-27 + `ge` `sy` `ae` | Bölge + şehir (dr5hn) |
+| `ge` | Gürcistan — Mkhedruli adlar (`enrich-ge-mkhedruli.php` + Geonames) |
+| AB-27 + `sy` `ae` | Bölge + şehir (dr5hn) |
 
 **Çeviri politikası**
 
@@ -38,9 +39,10 @@ php -d memory_limit=1024M build-region-packs.php
 # curl -L -o sources/geonames/UA.zip https://download.geonames.org/export/dump/UA.zip
 # expand → sources/geonames/UA/UA.txt
 php -d memory_limit=1024M enrich-ua-cyrillic.php
+php -d memory_limit=512M enrich-ge-mkhedruli.php
 ```
 
-`build-region-packs.php` dr5hn birleşik JSON’u `sources/dr5hn/` altına indirir (gitignore). `az`, `tr` ve `ua` dokunulmaz.
+`build-region-packs.php` dr5hn birleşik JSON’u `sources/dr5hn/` altına indirir (gitignore). `az`, `tr`, `ua` ve `ge` dokunulmaz.
 
 ## Attribution (ODbL)
 
