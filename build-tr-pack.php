@@ -1,8 +1,8 @@
 <?php
 /**
- * Türkiye konum paketi v1.0.0
+ * Türkiye konum paketi v1.0.1
  * Yalnızca il (state) + ilçe (city). Köy yok.
- * Ülke adı / uyruk: 11 dil. İl ve ilçe adları Türkçe (özel ad).
+ * Ülke adı / uyruk: 11 dil. İl ve ilçe adları yalnızca Türkçe (özel ad).
  *
  * Kaynak: sources/turkey-locations.json (turkiyeapi.dev il/ilçe).
  */
