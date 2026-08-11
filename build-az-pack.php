@@ -1,15 +1,14 @@
 <?php
 /**
- * Azerbaycan konum paketi v1.1.0
+ * Azerbaycan konum paketi v1.3.0
+ * Ülke adı: 11 dil. İl / ilçe / qəsəbə: yalnızca Azərbaycanca (az).
  * Büyük şehirler: ilçe + qəsəbə/kənd karışık (detaylı)
  * Diğer rayonlar: Merkez + qəsəbə/kasaba (kənd yok)
- *
- * Kaynaklar: Azərbaycan Dövlət Statistika (inzibati təsnifat),
- * bakucity.preslib.az, az.wikipedia.org qəsəbə siyahısı.
  */
 
 $locales = ['tr', 'en', 'ar', 'az', 'de', 'fr', 'ka', 'pl', 'ro', 'ru', 'uk'];
 
+/** Ülke adı / uyruk — tüm diller */
 function nm(string $az, string $en, array $locales, array $extra = []): array
 {
     $map = array_merge([
@@ -25,17 +24,26 @@ function nm(string $az, string $en, array $locales, array $extra = []): array
     return $out;
 }
 
-function city(string $key, string $az, string $en, array $locales, array $extra = []): array
+/** İl / ilçe — yalnızca az */
+function placeAz(string $az): array
 {
-    return ['key' => $key, 'name' => nm($az, $en, $locales, $extra)];
+    return ['az' => $az];
 }
 
-function citiesFromPairs(array $pairs, array $locales): array
+function city(string $key, string $az, string $en = '', array $locales = [], array $extra = []): array
+{
+    return ['key' => $key, 'name' => placeAz($az)];
+}
+
+function citiesFromPairs(array $pairs, array $locales = []): array
 {
     $out = [];
     foreach ($pairs as $key => $pair) {
-        [$az, $en] = $pair;
-        $out[] = city($key, $az, $en, $locales);
+        $az = is_array($pair) ? (string) ($pair[0] ?? '') : (string) $pair;
+        if ($az === '') {
+            continue;
+        }
+        $out[] = city($key, $az);
     }
 
     return $out;
@@ -148,13 +156,13 @@ $bakuCities = array_merge(
     citiesFromPairs($bakuSettlements, $locales)
 );
 $major['baku'] = [
-    'name' => nm('Bakı', 'Baku', $locales, ['ru' => 'Баку', 'uk' => 'Баку', 'tr' => 'Bakı']),
+    'name' => placeAz('Bakı'),
     'cities' => $bakuCities,
 ];
 
 // Gəncə
 $major['ganja'] = [
-    'name' => nm('Gəncə', 'Ganja', $locales, ['ru' => 'Гянджа', 'uk' => 'Гянджа']),
+    'name' => placeAz('Gəncə'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
         'kapaz' => ['Kəpəz', 'Kapaz'],
@@ -171,7 +179,7 @@ $major['ganja'] = [
 
 // Sumqayıt
 $major['sumqayit'] = [
-    'name' => nm('Sumqayıt', 'Sumgayit', $locales, ['ru' => 'Сумгаит', 'uk' => 'Сумгаїт']),
+    'name' => placeAz('Sumqayıt'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
         'jorat' => ['Corat', 'Jorat'],
@@ -181,7 +189,7 @@ $major['sumqayit'] = [
 
 // Mingəçevir
 $major['mingachevir'] = [
-    'name' => nm('Mingəçevir', 'Mingachevir', $locales, ['ru' => 'Мингечевир']),
+    'name' => placeAz('Mingəçevir'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
     ], $locales),
@@ -189,7 +197,7 @@ $major['mingachevir'] = [
 
 // Şirvan
 $major['shirvan'] = [
-    'name' => nm('Şirvan', 'Shirvan', $locales, ['ru' => 'Ширван']),
+    'name' => placeAz('Şirvan'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
         'bayramli' => ['Bayramlı', 'Bayramli'],
@@ -199,7 +207,7 @@ $major['shirvan'] = [
 
 // Naxçıvan şəhəri
 $major['nakhchivan'] = [
-    'name' => nm('Naxçıvan', 'Nakhchivan', $locales, ['ru' => 'Нахичевань']),
+    'name' => placeAz('Naxçıvan'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
         'aliabad' => ['Əliabad', 'Aliabad'],
@@ -208,7 +216,7 @@ $major['nakhchivan'] = [
 
 // Lənkəran şəhəri
 $major['lankaran'] = [
-    'name' => nm('Lənkəran', 'Lankaran', $locales, ['ru' => 'Ленкорань']),
+    'name' => placeAz('Lənkəran'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
         'liman' => ['Liman', 'Liman'],
@@ -221,7 +229,7 @@ $major['lankaran'] = [
 
 // Şəki şəhəri
 $major['shaki'] = [
-    'name' => nm('Şəki', 'Shaki', $locales, ['ru' => 'Шеки']),
+    'name' => placeAz('Şəki'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
         'kish' => ['Kiş', 'Kish'],
@@ -233,7 +241,7 @@ $major['shaki'] = [
 
 // Yevlax şəhəri
 $major['yevlakh'] = [
-    'name' => nm('Yevlax', 'Yevlakh', $locales, ['ru' => 'Евлах']),
+    'name' => placeAz('Yevlax'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
         'aran' => ['Aran', 'Aran'],
@@ -243,7 +251,7 @@ $major['yevlakh'] = [
 
 // Naftalan
 $major['naftalan'] = [
-    'name' => nm('Naftalan', 'Naftalan', $locales, ['ru' => 'Нафталан']),
+    'name' => placeAz('Naftalan'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
         'qashalti' => ['Qaşıaltı', 'Gashalti'],
@@ -253,7 +261,7 @@ $major['naftalan'] = [
 
 // Şuşa şəhəri
 $major['shusha'] = [
-    'name' => nm('Şuşa', 'Shusha', $locales, ['ru' => 'Шуша']),
+    'name' => placeAz('Şuşa'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
     ], $locales),
@@ -261,7 +269,7 @@ $major['shusha'] = [
 
 // Xankəndi
 $major['khankendi'] = [
-    'name' => nm('Xankəndi', 'Khankendi', $locales, ['ru' => 'Ханкенди']),
+    'name' => placeAz('Xankəndi'),
     'cities' => citiesFromPairs([
         'merkez' => ['Merkez', 'Center'],
     ], $locales),
@@ -372,7 +380,7 @@ foreach ($major as $key => $row) {
 foreach ($lightRayons as $key => [$az, $en, $cityPairs]) {
     $states[] = [
         'key' => $key,
-        'name' => nm($az, $en, $locales),
+        'name' => placeAz($az),
         'detail_level' => 'rayon_light',
         'cities' => citiesFromPairs($cityPairs, $locales),
     ];
@@ -387,11 +395,11 @@ $pack = [
     'id' => 'az',
     'iso2' => 'AZ',
     'code' => 'AZE',
-    'version' => '1.1.0',
+    'version' => '1.3.0',
     'default_locale' => 'az',
     'notes' => [
-        'tr' => 'Büyük şehirler (Bakı, Gəncə, Sumqayıt…): ilçe + qəsəbə detaylı. Diğer rayonlar: Merkez + kasaba/qəsəbə (kənd yok).',
-        'en' => 'Major cities: districts + settlements. Other rayons: center + towns (no villages).',
+        'tr' => 'Ülke adı 11 dil. İl/ilçe/qəsəbə yalnızca Azərbaycanca. Büyük şehirler detaylı; diğer rayonlar: Merkez + kasaba.',
+        'en' => 'Country name in 11 locales. Places in Azerbaijani only. Major cities detailed; other rayons: center + towns.',
     ],
     'country' => [
         'name' => $countryNames,
@@ -405,28 +413,46 @@ if (! is_dir($dir)) {
     mkdir($dir, 0777, true);
 }
 
-file_put_contents($dir.'/locations.json', json_encode($pack, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)."\n");
+$locationsPath = $dir.'/locations.json';
+file_put_contents($locationsPath, json_encode($pack, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)."\n");
 file_put_contents($dir.'/pack.json', json_encode([
     'id' => 'az',
-    'version' => '1.1.0',
+    'version' => '1.3.0',
     'iso2' => 'AZ',
     'code' => 'AZE',
-], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)."\n");
+], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n");
 
-$manifest = [
-    'version' => 1,
-    'packs' => [[
-        'id' => 'az',
-        'iso2' => 'AZ',
-        'code' => 'AZE',
-        'version' => '1.1.0',
-        'default_locale' => 'az',
-        'path' => 'packs/az/locations.json',
-        'states_count' => count($states),
-        'cities_count' => $cityCount,
-        'name' => $countryNames,
-    ]],
+$fileBytes = (int) filesize($locationsPath);
+$azRow = [
+    'id' => 'az',
+    'iso2' => 'AZ',
+    'code' => 'AZE',
+    'version' => '1.3.0',
+    'default_locale' => 'az',
+    'path' => 'packs/az/locations.json',
+    'states_count' => count($states),
+    'cities_count' => $cityCount,
+    'file_bytes' => $fileBytes,
+    'estimate_disk_bytes' => 4096 + (count($states) * 400) + ($cityCount * 450) + 2048,
+    'name' => $countryNames,
 ];
-file_put_contents(__DIR__.'/manifest.json', json_encode($manifest, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)."\n");
+
+$manifestPath = __DIR__.'/manifest.json';
+$manifest = is_file($manifestPath)
+    ? json_decode((string) file_get_contents($manifestPath), true)
+    : ['version' => 1, 'packs' => []];
+$found = false;
+foreach ($manifest['packs'] as &$row) {
+    if (($row['id'] ?? '') === 'az') {
+        $row = $azRow;
+        $found = true;
+        break;
+    }
+}
+unset($row);
+if (! $found) {
+    array_unshift($manifest['packs'], $azRow);
+}
+file_put_contents($manifestPath, json_encode($manifest, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n");
 
 echo 'OK states='.count($states).' cities='.$cityCount."\n";

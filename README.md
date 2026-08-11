@@ -23,7 +23,10 @@ packs/<id>/
 | `tr` | Türkiye il + ilçe |
 | AB-27 + `ge` `ua` `sy` `ae` | Bölge + şehir (dr5hn) |
 
-Ülke adı ve uyruk: `tr,en,ar,az,de,fr,ka,pl,ro,ru,uk`.
+**Çeviri politikası**
+
+- **Ülke adı / uyruk:** 11 dil (`tr,en,ar,az,de,fr,ka,pl,ro,ru,uk`)
+- **İl / eyalet / ilçe / şehir:** yalnızca o ülkenin kendi dili (`default_locale`). Örn. Bakı yalnızca `az`, İstanbul yalnızca `tr`, Berlin yalnızca `de`. Site dilinde çeviri yoksa ana kayıt (yerel ad) gösterilir.
 
 ## Yeni / yenile üretim
 
