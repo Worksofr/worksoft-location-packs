@@ -121,7 +121,7 @@ foreach ($countriesRaw as $c) {
 echo 'Wanted countries='.count($byIso2).PHP_EOL;
 
 $generated = [];
-$preserveIds = ['az', 'tr', 'ua', 'ge'];
+$preserveIds = ['az', 'tr', 'ua', 'ge', 'sy', 'ae'];
 $packVersion = '1.2.0';
 
 foreach ($countriesMeta as $meta) {
