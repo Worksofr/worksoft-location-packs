@@ -21,7 +21,8 @@ packs/<id>/
 |----|-----|
 | `az` | Özel Azerbaycan hiyerarşisi (ilçe + qəsəbə) |
 | `tr` | Türkiye il + ilçe |
-| AB-27 + `ge` `ua` `sy` `ae` | Bölge + şehir (dr5hn) |
+| `ua` | Ukrayna — Kiril adlar (`enrich-ua-cyrillic.php` + Geonames) |
+| AB-27 + `ge` `sy` `ae` | Bölge + şehir (dr5hn) |
 
 **Çeviri politikası**
 
@@ -33,9 +34,13 @@ packs/<id>/
 ```bash
 php generate-country-i18n.php   # data/country-i18n.php
 php -d memory_limit=1024M build-region-packs.php
+# Ukrayna Kiril (Geonames UA.zip gerekli):
+# curl -L -o sources/geonames/UA.zip https://download.geonames.org/export/dump/UA.zip
+# expand → sources/geonames/UA/UA.txt
+php -d memory_limit=1024M enrich-ua-cyrillic.php
 ```
 
-`build-region-packs.php` dr5hn birleşik JSON’u `sources/dr5hn/` altına indirir (gitignore). `az` ve `tr` dokunulmaz.
+`build-region-packs.php` dr5hn birleşik JSON’u `sources/dr5hn/` altına indirir (gitignore). `az`, `tr` ve `ua` dokunulmaz.
 
 ## Attribution (ODbL)
 

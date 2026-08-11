@@ -1,4 +1,5 @@
 /sources/dr5hn/
+/sources/geonames/
 *.gz
 .phpunit.result.cache
 .git/COMMIT_EDITMSG_TMP.txt

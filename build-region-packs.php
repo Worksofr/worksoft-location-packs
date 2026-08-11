@@ -121,12 +121,15 @@ foreach ($countriesRaw as $c) {
 echo 'Wanted countries='.count($byIso2).PHP_EOL;
 
 $generated = [];
-$preserveIds = ['az', 'tr'];
+$preserveIds = ['az', 'tr', 'ua'];
 $packVersion = '1.2.0';
 
 foreach ($countriesMeta as $meta) {
     $iso2 = strtoupper((string) $meta['iso2']);
     $id = (string) $meta['id'];
+    if (in_array($id, $preserveIds, true)) {
+        continue;
+    }
     $iso3 = (string) $meta['iso3'];
     $defaultLocale = (string) $meta['default_locale'];
 
