@@ -7,7 +7,7 @@
             "code": "AZE",
             "version": "1.1.0",
             "default_locale": "az",
-            "path": "packs\/az\/locations.json",
+            "path": "packs/az/locations.json",
             "states_count": 78,
             "cities_count": 271,
             "name": {
@@ -22,6 +22,29 @@
                 "ro": "Azerbaidjan",
                 "ru": "Азербайджан",
                 "uk": "Азербайджан"
+            }
+        },
+        {
+            "id": "tr",
+            "iso2": "TR",
+            "code": "TR",
+            "version": "1.0.0",
+            "default_locale": "tr",
+            "path": "packs/tr/locations.json",
+            "states_count": 81,
+            "cities_count": 974,
+            "name": {
+                "tr": "Türkiye",
+                "en": "Turkey",
+                "ar": "تركيا",
+                "az": "Türkiyə",
+                "de": "Türkei",
+                "fr": "Turquie",
+                "ka": "თურქეთი",
+                "pl": "Turcja",
+                "ro": "Turcia",
+                "ru": "Турция",
+                "uk": "Туреччина"
             }
         }
     ]
