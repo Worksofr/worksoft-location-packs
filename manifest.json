@@ -1,0 +1,28 @@
+{
+    "version": 1,
+    "packs": [
+        {
+            "id": "az",
+            "iso2": "AZ",
+            "code": "AZE",
+            "version": "1.0.0",
+            "default_locale": "az",
+            "path": "packs\/az\/locations.json",
+            "states_count": 74,
+            "cities_count": 74,
+            "name": {
+                "az": "Azərbaycan",
+                "tr": "Azerbaycan",
+                "en": "Azerbaijan",
+                "ar": "أذربيجان",
+                "de": "Aserbaidschan",
+                "fr": "Azerbaïdjan",
+                "ka": "აზერბაიჯანი",
+                "pl": "Azerbejdżan",
+                "ro": "Azerbaidjan",
+                "ru": "Азербайджан",
+                "uk": "Азербайджан"
+            }
+        }
+    ]
+}

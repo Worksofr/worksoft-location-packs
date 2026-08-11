@@ -1,0 +1,2553 @@
+{
+    "id": "az",
+    "iso2": "AZ",
+    "code": "AZE",
+    "version": "1.0.0",
+    "default_locale": "az",
+    "country": {
+        "name": {
+            "az": "Azərbaycan",
+            "tr": "Azerbaycan",
+            "en": "Azerbaijan",
+            "ar": "أذربيجان",
+            "de": "Aserbaidschan",
+            "fr": "Azerbaïdjan",
+            "ka": "აზერბაიჯანი",
+            "pl": "Azerbejdżan",
+            "ro": "Azerbaidjan",
+            "ru": "Азербайджан",
+            "uk": "Азербайджан"
+        },
+        "nationality": {
+            "az": "Azərbaycanlı",
+            "tr": "Azerbaycanlı",
+            "en": "Azerbaijani",
+            "ar": "أذربيجاني",
+            "de": "Aserbaidschaner",
+            "fr": "Azerbaïdjanais",
+            "ka": "აზერბაიჯანელი",
+            "pl": "Azerbejdżanin",
+            "ro": "Azerbaidjan",
+            "ru": "Азербайджанец",
+            "uk": "Азербайджанець"
+        }
+    },
+    "states": [
+        {
+            "key": "absheron",
+            "name": {
+                "tr": "Abşeron",
+                "en": "Absheron",
+                "ar": "Absheron",
+                "az": "Abşeron",
+                "de": "Absheron",
+                "fr": "Absheron",
+                "ka": "Absheron",
+                "pl": "Absheron",
+                "ro": "Absheron",
+                "ru": "Abşeron",
+                "uk": "Absheron"
+            },
+            "cities": [
+                {
+                    "key": "absheron",
+                    "name": {
+                        "tr": "Abşeron",
+                        "en": "Absheron",
+                        "ar": "Absheron",
+                        "az": "Abşeron",
+                        "de": "Absheron",
+                        "fr": "Absheron",
+                        "ka": "Absheron",
+                        "pl": "Absheron",
+                        "ro": "Absheron",
+                        "ru": "Abşeron",
+                        "uk": "Absheron"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "agdam",
+            "name": {
+                "tr": "Ağdam",
+                "en": "Agdam",
+                "ar": "Agdam",
+                "az": "Ağdam",
+                "de": "Agdam",
+                "fr": "Agdam",
+                "ka": "Agdam",
+                "pl": "Agdam",
+                "ro": "Agdam",
+                "ru": "Ağdam",
+                "uk": "Agdam"
+            },
+            "cities": [
+                {
+                    "key": "agdam",
+                    "name": {
+                        "tr": "Ağdam",
+                        "en": "Agdam",
+                        "ar": "Agdam",
+                        "az": "Ağdam",
+                        "de": "Agdam",
+                        "fr": "Agdam",
+                        "ka": "Agdam",
+                        "pl": "Agdam",
+                        "ro": "Agdam",
+                        "ru": "Ağdam",
+                        "uk": "Agdam"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "agdash",
+            "name": {
+                "tr": "Ağdaş",
+                "en": "Agdash",
+                "ar": "Agdash",
+                "az": "Ağdaş",
+                "de": "Agdash",
+                "fr": "Agdash",
+                "ka": "Agdash",
+                "pl": "Agdash",
+                "ro": "Agdash",
+                "ru": "Ağdaş",
+                "uk": "Agdash"
+            },
+            "cities": [
+                {
+                    "key": "agdash",
+                    "name": {
+                        "tr": "Ağdaş",
+                        "en": "Agdash",
+                        "ar": "Agdash",
+                        "az": "Ağdaş",
+                        "de": "Agdash",
+                        "fr": "Agdash",
+                        "ka": "Agdash",
+                        "pl": "Agdash",
+                        "ro": "Agdash",
+                        "ru": "Ağdaş",
+                        "uk": "Agdash"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "aghjabadi",
+            "name": {
+                "tr": "Ağcabədi",
+                "en": "Aghjabadi",
+                "ar": "Aghjabadi",
+                "az": "Ağcabədi",
+                "de": "Aghjabadi",
+                "fr": "Aghjabadi",
+                "ka": "Aghjabadi",
+                "pl": "Aghjabadi",
+                "ro": "Aghjabadi",
+                "ru": "Ağcabədi",
+                "uk": "Aghjabadi"
+            },
+            "cities": [
+                {
+                    "key": "aghjabadi",
+                    "name": {
+                        "tr": "Ağcabədi",
+                        "en": "Aghjabadi",
+                        "ar": "Aghjabadi",
+                        "az": "Ağcabədi",
+                        "de": "Aghjabadi",
+                        "fr": "Aghjabadi",
+                        "ka": "Aghjabadi",
+                        "pl": "Aghjabadi",
+                        "ro": "Aghjabadi",
+                        "ru": "Ağcabədi",
+                        "uk": "Aghjabadi"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "agsu",
+            "name": {
+                "tr": "Ağsu",
+                "en": "Agsu",
+                "ar": "Agsu",
+                "az": "Ağsu",
+                "de": "Agsu",
+                "fr": "Agsu",
+                "ka": "Agsu",
+                "pl": "Agsu",
+                "ro": "Agsu",
+                "ru": "Ağsu",
+                "uk": "Agsu"
+            },
+            "cities": [
+                {
+                    "key": "agsu",
+                    "name": {
+                        "tr": "Ağsu",
+                        "en": "Agsu",
+                        "ar": "Agsu",
+                        "az": "Ağsu",
+                        "de": "Agsu",
+                        "fr": "Agsu",
+                        "ka": "Agsu",
+                        "pl": "Agsu",
+                        "ro": "Agsu",
+                        "ru": "Ağsu",
+                        "uk": "Agsu"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "agstafa",
+            "name": {
+                "tr": "Ağstafa",
+                "en": "Agstafa",
+                "ar": "Agstafa",
+                "az": "Ağstafa",
+                "de": "Agstafa",
+                "fr": "Agstafa",
+                "ka": "Agstafa",
+                "pl": "Agstafa",
+                "ro": "Agstafa",
+                "ru": "Ağstafa",
+                "uk": "Agstafa"
+            },
+            "cities": [
+                {
+                    "key": "agstafa",
+                    "name": {
+                        "tr": "Ağstafa",
+                        "en": "Agstafa",
+                        "ar": "Agstafa",
+                        "az": "Ağstafa",
+                        "de": "Agstafa",
+                        "fr": "Agstafa",
+                        "ka": "Agstafa",
+                        "pl": "Agstafa",
+                        "ro": "Agstafa",
+                        "ru": "Ağstafa",
+                        "uk": "Agstafa"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "astara",
+            "name": {
+                "tr": "Astara",
+                "en": "Astara",
+                "ar": "Astara",
+                "az": "Astara",
+                "de": "Astara",
+                "fr": "Astara",
+                "ka": "Astara",
+                "pl": "Astara",
+                "ro": "Astara",
+                "ru": "Astara",
+                "uk": "Astara"
+            },
+            "cities": [
+                {
+                    "key": "astara",
+                    "name": {
+                        "tr": "Astara",
+                        "en": "Astara",
+                        "ar": "Astara",
+                        "az": "Astara",
+                        "de": "Astara",
+                        "fr": "Astara",
+                        "ka": "Astara",
+                        "pl": "Astara",
+                        "ro": "Astara",
+                        "ru": "Astara",
+                        "uk": "Astara"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "babek",
+            "name": {
+                "tr": "Babək",
+                "en": "Babek",
+                "ar": "Babek",
+                "az": "Babək",
+                "de": "Babek",
+                "fr": "Babek",
+                "ka": "Babek",
+                "pl": "Babek",
+                "ro": "Babek",
+                "ru": "Babək",
+                "uk": "Babek"
+            },
+            "cities": [
+                {
+                    "key": "babek",
+                    "name": {
+                        "tr": "Babək",
+                        "en": "Babek",
+                        "ar": "Babek",
+                        "az": "Babək",
+                        "de": "Babek",
+                        "fr": "Babek",
+                        "ka": "Babek",
+                        "pl": "Babek",
+                        "ro": "Babek",
+                        "ru": "Babək",
+                        "uk": "Babek"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "baku",
+            "name": {
+                "tr": "Bakı",
+                "en": "Baku",
+                "ar": "Baku",
+                "az": "Bakı",
+                "de": "Baku",
+                "fr": "Baku",
+                "ka": "Baku",
+                "pl": "Baku",
+                "ro": "Baku",
+                "ru": "Баку",
+                "uk": "Баку"
+            },
+            "cities": [
+                {
+                    "key": "baku",
+                    "name": {
+                        "tr": "Bakı",
+                        "en": "Baku",
+                        "ar": "Baku",
+                        "az": "Bakı",
+                        "de": "Baku",
+                        "fr": "Baku",
+                        "ka": "Baku",
+                        "pl": "Baku",
+                        "ro": "Baku",
+                        "ru": "Баку",
+                        "uk": "Баку"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "balakan",
+            "name": {
+                "tr": "Balakən",
+                "en": "Balakan",
+                "ar": "Balakan",
+                "az": "Balakən",
+                "de": "Balakan",
+                "fr": "Balakan",
+                "ka": "Balakan",
+                "pl": "Balakan",
+                "ro": "Balakan",
+                "ru": "Balakən",
+                "uk": "Balakan"
+            },
+            "cities": [
+                {
+                    "key": "balakan",
+                    "name": {
+                        "tr": "Balakən",
+                        "en": "Balakan",
+                        "ar": "Balakan",
+                        "az": "Balakən",
+                        "de": "Balakan",
+                        "fr": "Balakan",
+                        "ka": "Balakan",
+                        "pl": "Balakan",
+                        "ro": "Balakan",
+                        "ru": "Balakən",
+                        "uk": "Balakan"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "barda",
+            "name": {
+                "tr": "Bərdə",
+                "en": "Barda",
+                "ar": "Barda",
+                "az": "Bərdə",
+                "de": "Barda",
+                "fr": "Barda",
+                "ka": "Barda",
+                "pl": "Barda",
+                "ro": "Barda",
+                "ru": "Bərdə",
+                "uk": "Barda"
+            },
+            "cities": [
+                {
+                    "key": "barda",
+                    "name": {
+                        "tr": "Bərdə",
+                        "en": "Barda",
+                        "ar": "Barda",
+                        "az": "Bərdə",
+                        "de": "Barda",
+                        "fr": "Barda",
+                        "ka": "Barda",
+                        "pl": "Barda",
+                        "ro": "Barda",
+                        "ru": "Bərdə",
+                        "uk": "Barda"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "beylagan",
+            "name": {
+                "tr": "Beyləqan",
+                "en": "Beylagan",
+                "ar": "Beylagan",
+                "az": "Beyləqan",
+                "de": "Beylagan",
+                "fr": "Beylagan",
+                "ka": "Beylagan",
+                "pl": "Beylagan",
+                "ro": "Beylagan",
+                "ru": "Beyləqan",
+                "uk": "Beylagan"
+            },
+            "cities": [
+                {
+                    "key": "beylagan",
+                    "name": {
+                        "tr": "Beyləqan",
+                        "en": "Beylagan",
+                        "ar": "Beylagan",
+                        "az": "Beyləqan",
+                        "de": "Beylagan",
+                        "fr": "Beylagan",
+                        "ka": "Beylagan",
+                        "pl": "Beylagan",
+                        "ro": "Beylagan",
+                        "ru": "Beyləqan",
+                        "uk": "Beylagan"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "bilasuvar",
+            "name": {
+                "tr": "Biləsuvar",
+                "en": "Bilasuvar",
+                "ar": "Bilasuvar",
+                "az": "Biləsuvar",
+                "de": "Bilasuvar",
+                "fr": "Bilasuvar",
+                "ka": "Bilasuvar",
+                "pl": "Bilasuvar",
+                "ro": "Bilasuvar",
+                "ru": "Biləsuvar",
+                "uk": "Bilasuvar"
+            },
+            "cities": [
+                {
+                    "key": "bilasuvar",
+                    "name": {
+                        "tr": "Biləsuvar",
+                        "en": "Bilasuvar",
+                        "ar": "Bilasuvar",
+                        "az": "Biləsuvar",
+                        "de": "Bilasuvar",
+                        "fr": "Bilasuvar",
+                        "ka": "Bilasuvar",
+                        "pl": "Bilasuvar",
+                        "ro": "Bilasuvar",
+                        "ru": "Biləsuvar",
+                        "uk": "Bilasuvar"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "dashkasan",
+            "name": {
+                "tr": "Daşkəsən",
+                "en": "Dashkasan",
+                "ar": "Dashkasan",
+                "az": "Daşkəsən",
+                "de": "Dashkasan",
+                "fr": "Dashkasan",
+                "ka": "Dashkasan",
+                "pl": "Dashkasan",
+                "ro": "Dashkasan",
+                "ru": "Daşkəsən",
+                "uk": "Dashkasan"
+            },
+            "cities": [
+                {
+                    "key": "dashkasan",
+                    "name": {
+                        "tr": "Daşkəsən",
+                        "en": "Dashkasan",
+                        "ar": "Dashkasan",
+                        "az": "Daşkəsən",
+                        "de": "Dashkasan",
+                        "fr": "Dashkasan",
+                        "ka": "Dashkasan",
+                        "pl": "Dashkasan",
+                        "ro": "Dashkasan",
+                        "ru": "Daşkəsən",
+                        "uk": "Dashkasan"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "fuzuli",
+            "name": {
+                "tr": "Füzuli",
+                "en": "Fuzuli",
+                "ar": "Fuzuli",
+                "az": "Füzuli",
+                "de": "Fuzuli",
+                "fr": "Fuzuli",
+                "ka": "Fuzuli",
+                "pl": "Fuzuli",
+                "ro": "Fuzuli",
+                "ru": "Füzuli",
+                "uk": "Fuzuli"
+            },
+            "cities": [
+                {
+                    "key": "fuzuli",
+                    "name": {
+                        "tr": "Füzuli",
+                        "en": "Fuzuli",
+                        "ar": "Fuzuli",
+                        "az": "Füzuli",
+                        "de": "Fuzuli",
+                        "fr": "Fuzuli",
+                        "ka": "Fuzuli",
+                        "pl": "Fuzuli",
+                        "ro": "Fuzuli",
+                        "ru": "Füzuli",
+                        "uk": "Fuzuli"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "gadabay",
+            "name": {
+                "tr": "Gədəbəy",
+                "en": "Gadabay",
+                "ar": "Gadabay",
+                "az": "Gədəbəy",
+                "de": "Gadabay",
+                "fr": "Gadabay",
+                "ka": "Gadabay",
+                "pl": "Gadabay",
+                "ro": "Gadabay",
+                "ru": "Gədəbəy",
+                "uk": "Gadabay"
+            },
+            "cities": [
+                {
+                    "key": "gadabay",
+                    "name": {
+                        "tr": "Gədəbəy",
+                        "en": "Gadabay",
+                        "ar": "Gadabay",
+                        "az": "Gədəbəy",
+                        "de": "Gadabay",
+                        "fr": "Gadabay",
+                        "ka": "Gadabay",
+                        "pl": "Gadabay",
+                        "ro": "Gadabay",
+                        "ru": "Gədəbəy",
+                        "uk": "Gadabay"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "ganja",
+            "name": {
+                "tr": "Gəncə",
+                "en": "Ganja",
+                "ar": "Ganja",
+                "az": "Gəncə",
+                "de": "Ganja",
+                "fr": "Ganja",
+                "ka": "Ganja",
+                "pl": "Ganja",
+                "ro": "Ganja",
+                "ru": "Гянджа",
+                "uk": "Гянджа"
+            },
+            "cities": [
+                {
+                    "key": "ganja",
+                    "name": {
+                        "tr": "Gəncə",
+                        "en": "Ganja",
+                        "ar": "Ganja",
+                        "az": "Gəncə",
+                        "de": "Ganja",
+                        "fr": "Ganja",
+                        "ka": "Ganja",
+                        "pl": "Ganja",
+                        "ro": "Ganja",
+                        "ru": "Гянджа",
+                        "uk": "Гянджа"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "gobustan",
+            "name": {
+                "tr": "Qobustan",
+                "en": "Gobustan",
+                "ar": "Gobustan",
+                "az": "Qobustan",
+                "de": "Gobustan",
+                "fr": "Gobustan",
+                "ka": "Gobustan",
+                "pl": "Gobustan",
+                "ro": "Gobustan",
+                "ru": "Qobustan",
+                "uk": "Gobustan"
+            },
+            "cities": [
+                {
+                    "key": "gobustan",
+                    "name": {
+                        "tr": "Qobustan",
+                        "en": "Gobustan",
+                        "ar": "Gobustan",
+                        "az": "Qobustan",
+                        "de": "Gobustan",
+                        "fr": "Gobustan",
+                        "ka": "Gobustan",
+                        "pl": "Gobustan",
+                        "ro": "Gobustan",
+                        "ru": "Qobustan",
+                        "uk": "Gobustan"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "goranboy",
+            "name": {
+                "tr": "Goranboy",
+                "en": "Goranboy",
+                "ar": "Goranboy",
+                "az": "Goranboy",
+                "de": "Goranboy",
+                "fr": "Goranboy",
+                "ka": "Goranboy",
+                "pl": "Goranboy",
+                "ro": "Goranboy",
+                "ru": "Goranboy",
+                "uk": "Goranboy"
+            },
+            "cities": [
+                {
+                    "key": "goranboy",
+                    "name": {
+                        "tr": "Goranboy",
+                        "en": "Goranboy",
+                        "ar": "Goranboy",
+                        "az": "Goranboy",
+                        "de": "Goranboy",
+                        "fr": "Goranboy",
+                        "ka": "Goranboy",
+                        "pl": "Goranboy",
+                        "ro": "Goranboy",
+                        "ru": "Goranboy",
+                        "uk": "Goranboy"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "goychay",
+            "name": {
+                "tr": "Göyçay",
+                "en": "Goychay",
+                "ar": "Goychay",
+                "az": "Göyçay",
+                "de": "Goychay",
+                "fr": "Goychay",
+                "ka": "Goychay",
+                "pl": "Goychay",
+                "ro": "Goychay",
+                "ru": "Göyçay",
+                "uk": "Goychay"
+            },
+            "cities": [
+                {
+                    "key": "goychay",
+                    "name": {
+                        "tr": "Göyçay",
+                        "en": "Goychay",
+                        "ar": "Goychay",
+                        "az": "Göyçay",
+                        "de": "Goychay",
+                        "fr": "Goychay",
+                        "ka": "Goychay",
+                        "pl": "Goychay",
+                        "ro": "Goychay",
+                        "ru": "Göyçay",
+                        "uk": "Goychay"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "goygol",
+            "name": {
+                "tr": "Göygöl",
+                "en": "Goygol",
+                "ar": "Goygol",
+                "az": "Göygöl",
+                "de": "Goygol",
+                "fr": "Goygol",
+                "ka": "Goygol",
+                "pl": "Goygol",
+                "ro": "Goygol",
+                "ru": "Göygöl",
+                "uk": "Goygol"
+            },
+            "cities": [
+                {
+                    "key": "goygol",
+                    "name": {
+                        "tr": "Göygöl",
+                        "en": "Goygol",
+                        "ar": "Goygol",
+                        "az": "Göygöl",
+                        "de": "Goygol",
+                        "fr": "Goygol",
+                        "ka": "Goygol",
+                        "pl": "Goygol",
+                        "ro": "Goygol",
+                        "ru": "Göygöl",
+                        "uk": "Goygol"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "hajigabul",
+            "name": {
+                "tr": "Hacıqabul",
+                "en": "Hajigabul",
+                "ar": "Hajigabul",
+                "az": "Hacıqabul",
+                "de": "Hajigabul",
+                "fr": "Hajigabul",
+                "ka": "Hajigabul",
+                "pl": "Hajigabul",
+                "ro": "Hajigabul",
+                "ru": "Hacıqabul",
+                "uk": "Hajigabul"
+            },
+            "cities": [
+                {
+                    "key": "hajigabul",
+                    "name": {
+                        "tr": "Hacıqabul",
+                        "en": "Hajigabul",
+                        "ar": "Hajigabul",
+                        "az": "Hacıqabul",
+                        "de": "Hajigabul",
+                        "fr": "Hajigabul",
+                        "ka": "Hajigabul",
+                        "pl": "Hajigabul",
+                        "ro": "Hajigabul",
+                        "ru": "Hacıqabul",
+                        "uk": "Hajigabul"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "imishli",
+            "name": {
+                "tr": "İmişli",
+                "en": "Imishli",
+                "ar": "Imishli",
+                "az": "İmişli",
+                "de": "Imishli",
+                "fr": "Imishli",
+                "ka": "Imishli",
+                "pl": "Imishli",
+                "ro": "Imishli",
+                "ru": "İmişli",
+                "uk": "Imishli"
+            },
+            "cities": [
+                {
+                    "key": "imishli",
+                    "name": {
+                        "tr": "İmişli",
+                        "en": "Imishli",
+                        "ar": "Imishli",
+                        "az": "İmişli",
+                        "de": "Imishli",
+                        "fr": "Imishli",
+                        "ka": "Imishli",
+                        "pl": "Imishli",
+                        "ro": "Imishli",
+                        "ru": "İmişli",
+                        "uk": "Imishli"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "ismailli",
+            "name": {
+                "tr": "İsmayıllı",
+                "en": "Ismailli",
+                "ar": "Ismailli",
+                "az": "İsmayıllı",
+                "de": "Ismailli",
+                "fr": "Ismailli",
+                "ka": "Ismailli",
+                "pl": "Ismailli",
+                "ro": "Ismailli",
+                "ru": "İsmayıllı",
+                "uk": "Ismailli"
+            },
+            "cities": [
+                {
+                    "key": "ismailli",
+                    "name": {
+                        "tr": "İsmayıllı",
+                        "en": "Ismailli",
+                        "ar": "Ismailli",
+                        "az": "İsmayıllı",
+                        "de": "Ismailli",
+                        "fr": "Ismailli",
+                        "ka": "Ismailli",
+                        "pl": "Ismailli",
+                        "ro": "Ismailli",
+                        "ru": "İsmayıllı",
+                        "uk": "Ismailli"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "jabrayil",
+            "name": {
+                "tr": "Cəbrayıl",
+                "en": "Jabrayil",
+                "ar": "Jabrayil",
+                "az": "Cəbrayıl",
+                "de": "Jabrayil",
+                "fr": "Jabrayil",
+                "ka": "Jabrayil",
+                "pl": "Jabrayil",
+                "ro": "Jabrayil",
+                "ru": "Cəbrayıl",
+                "uk": "Jabrayil"
+            },
+            "cities": [
+                {
+                    "key": "jabrayil",
+                    "name": {
+                        "tr": "Cəbrayıl",
+                        "en": "Jabrayil",
+                        "ar": "Jabrayil",
+                        "az": "Cəbrayıl",
+                        "de": "Jabrayil",
+                        "fr": "Jabrayil",
+                        "ka": "Jabrayil",
+                        "pl": "Jabrayil",
+                        "ro": "Jabrayil",
+                        "ru": "Cəbrayıl",
+                        "uk": "Jabrayil"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "jalilabad",
+            "name": {
+                "tr": "Cəlilabad",
+                "en": "Jalilabad",
+                "ar": "Jalilabad",
+                "az": "Cəlilabad",
+                "de": "Jalilabad",
+                "fr": "Jalilabad",
+                "ka": "Jalilabad",
+                "pl": "Jalilabad",
+                "ro": "Jalilabad",
+                "ru": "Cəlilabad",
+                "uk": "Jalilabad"
+            },
+            "cities": [
+                {
+                    "key": "jalilabad",
+                    "name": {
+                        "tr": "Cəlilabad",
+                        "en": "Jalilabad",
+                        "ar": "Jalilabad",
+                        "az": "Cəlilabad",
+                        "de": "Jalilabad",
+                        "fr": "Jalilabad",
+                        "ka": "Jalilabad",
+                        "pl": "Jalilabad",
+                        "ro": "Jalilabad",
+                        "ru": "Cəlilabad",
+                        "uk": "Jalilabad"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "julfa",
+            "name": {
+                "tr": "Culfa",
+                "en": "Julfa",
+                "ar": "Julfa",
+                "az": "Culfa",
+                "de": "Julfa",
+                "fr": "Julfa",
+                "ka": "Julfa",
+                "pl": "Julfa",
+                "ro": "Julfa",
+                "ru": "Culfa",
+                "uk": "Julfa"
+            },
+            "cities": [
+                {
+                    "key": "julfa",
+                    "name": {
+                        "tr": "Culfa",
+                        "en": "Julfa",
+                        "ar": "Julfa",
+                        "az": "Culfa",
+                        "de": "Julfa",
+                        "fr": "Julfa",
+                        "ka": "Julfa",
+                        "pl": "Julfa",
+                        "ro": "Julfa",
+                        "ru": "Culfa",
+                        "uk": "Julfa"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "kalbajar",
+            "name": {
+                "tr": "Kəlbəcər",
+                "en": "Kalbajar",
+                "ar": "Kalbajar",
+                "az": "Kəlbəcər",
+                "de": "Kalbajar",
+                "fr": "Kalbajar",
+                "ka": "Kalbajar",
+                "pl": "Kalbajar",
+                "ro": "Kalbajar",
+                "ru": "Kəlbəcər",
+                "uk": "Kalbajar"
+            },
+            "cities": [
+                {
+                    "key": "kalbajar",
+                    "name": {
+                        "tr": "Kəlbəcər",
+                        "en": "Kalbajar",
+                        "ar": "Kalbajar",
+                        "az": "Kəlbəcər",
+                        "de": "Kalbajar",
+                        "fr": "Kalbajar",
+                        "ka": "Kalbajar",
+                        "pl": "Kalbajar",
+                        "ro": "Kalbajar",
+                        "ru": "Kəlbəcər",
+                        "uk": "Kalbajar"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "kangarli",
+            "name": {
+                "tr": "Kəngərli",
+                "en": "Kangarli",
+                "ar": "Kangarli",
+                "az": "Kəngərli",
+                "de": "Kangarli",
+                "fr": "Kangarli",
+                "ka": "Kangarli",
+                "pl": "Kangarli",
+                "ro": "Kangarli",
+                "ru": "Kəngərli",
+                "uk": "Kangarli"
+            },
+            "cities": [
+                {
+                    "key": "kangarli",
+                    "name": {
+                        "tr": "Kəngərli",
+                        "en": "Kangarli",
+                        "ar": "Kangarli",
+                        "az": "Kəngərli",
+                        "de": "Kangarli",
+                        "fr": "Kangarli",
+                        "ka": "Kangarli",
+                        "pl": "Kangarli",
+                        "ro": "Kangarli",
+                        "ru": "Kəngərli",
+                        "uk": "Kangarli"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "khachmaz",
+            "name": {
+                "tr": "Xaçmaz",
+                "en": "Khachmaz",
+                "ar": "Khachmaz",
+                "az": "Xaçmaz",
+                "de": "Khachmaz",
+                "fr": "Khachmaz",
+                "ka": "Khachmaz",
+                "pl": "Khachmaz",
+                "ro": "Khachmaz",
+                "ru": "Xaçmaz",
+                "uk": "Khachmaz"
+            },
+            "cities": [
+                {
+                    "key": "khachmaz",
+                    "name": {
+                        "tr": "Xaçmaz",
+                        "en": "Khachmaz",
+                        "ar": "Khachmaz",
+                        "az": "Xaçmaz",
+                        "de": "Khachmaz",
+                        "fr": "Khachmaz",
+                        "ka": "Khachmaz",
+                        "pl": "Khachmaz",
+                        "ro": "Khachmaz",
+                        "ru": "Xaçmaz",
+                        "uk": "Khachmaz"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "khankendi",
+            "name": {
+                "tr": "Xankəndi",
+                "en": "Khankendi",
+                "ar": "Khankendi",
+                "az": "Xankəndi",
+                "de": "Khankendi",
+                "fr": "Khankendi",
+                "ka": "Khankendi",
+                "pl": "Khankendi",
+                "ro": "Khankendi",
+                "ru": "Ханкенди",
+                "uk": "Ханкенди"
+            },
+            "cities": [
+                {
+                    "key": "khankendi",
+                    "name": {
+                        "tr": "Xankəndi",
+                        "en": "Khankendi",
+                        "ar": "Khankendi",
+                        "az": "Xankəndi",
+                        "de": "Khankendi",
+                        "fr": "Khankendi",
+                        "ka": "Khankendi",
+                        "pl": "Khankendi",
+                        "ro": "Khankendi",
+                        "ru": "Ханкенди",
+                        "uk": "Ханкенди"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "khizi",
+            "name": {
+                "tr": "Xızı",
+                "en": "Khizi",
+                "ar": "Khizi",
+                "az": "Xızı",
+                "de": "Khizi",
+                "fr": "Khizi",
+                "ka": "Khizi",
+                "pl": "Khizi",
+                "ro": "Khizi",
+                "ru": "Xızı",
+                "uk": "Khizi"
+            },
+            "cities": [
+                {
+                    "key": "khizi",
+                    "name": {
+                        "tr": "Xızı",
+                        "en": "Khizi",
+                        "ar": "Khizi",
+                        "az": "Xızı",
+                        "de": "Khizi",
+                        "fr": "Khizi",
+                        "ka": "Khizi",
+                        "pl": "Khizi",
+                        "ro": "Khizi",
+                        "ru": "Xızı",
+                        "uk": "Khizi"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "khojaly",
+            "name": {
+                "tr": "Xocalı",
+                "en": "Khojaly",
+                "ar": "Khojaly",
+                "az": "Xocalı",
+                "de": "Khojaly",
+                "fr": "Khojaly",
+                "ka": "Khojaly",
+                "pl": "Khojaly",
+                "ro": "Khojaly",
+                "ru": "Xocalı",
+                "uk": "Khojaly"
+            },
+            "cities": [
+                {
+                    "key": "khojaly",
+                    "name": {
+                        "tr": "Xocalı",
+                        "en": "Khojaly",
+                        "ar": "Khojaly",
+                        "az": "Xocalı",
+                        "de": "Khojaly",
+                        "fr": "Khojaly",
+                        "ka": "Khojaly",
+                        "pl": "Khojaly",
+                        "ro": "Khojaly",
+                        "ru": "Xocalı",
+                        "uk": "Khojaly"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "khojavend",
+            "name": {
+                "tr": "Xocavənd",
+                "en": "Khojavend",
+                "ar": "Khojavend",
+                "az": "Xocavənd",
+                "de": "Khojavend",
+                "fr": "Khojavend",
+                "ka": "Khojavend",
+                "pl": "Khojavend",
+                "ro": "Khojavend",
+                "ru": "Xocavənd",
+                "uk": "Khojavend"
+            },
+            "cities": [
+                {
+                    "key": "khojavend",
+                    "name": {
+                        "tr": "Xocavənd",
+                        "en": "Khojavend",
+                        "ar": "Khojavend",
+                        "az": "Xocavənd",
+                        "de": "Khojavend",
+                        "fr": "Khojavend",
+                        "ka": "Khojavend",
+                        "pl": "Khojavend",
+                        "ro": "Khojavend",
+                        "ru": "Xocavənd",
+                        "uk": "Khojavend"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "kurdamir",
+            "name": {
+                "tr": "Kürdəmir",
+                "en": "Kurdamir",
+                "ar": "Kurdamir",
+                "az": "Kürdəmir",
+                "de": "Kurdamir",
+                "fr": "Kurdamir",
+                "ka": "Kurdamir",
+                "pl": "Kurdamir",
+                "ro": "Kurdamir",
+                "ru": "Kürdəmir",
+                "uk": "Kurdamir"
+            },
+            "cities": [
+                {
+                    "key": "kurdamir",
+                    "name": {
+                        "tr": "Kürdəmir",
+                        "en": "Kurdamir",
+                        "ar": "Kurdamir",
+                        "az": "Kürdəmir",
+                        "de": "Kurdamir",
+                        "fr": "Kurdamir",
+                        "ka": "Kurdamir",
+                        "pl": "Kurdamir",
+                        "ro": "Kurdamir",
+                        "ru": "Kürdəmir",
+                        "uk": "Kurdamir"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "lachin",
+            "name": {
+                "tr": "Laçın",
+                "en": "Lachin",
+                "ar": "Lachin",
+                "az": "Laçın",
+                "de": "Lachin",
+                "fr": "Lachin",
+                "ka": "Lachin",
+                "pl": "Lachin",
+                "ro": "Lachin",
+                "ru": "Laçın",
+                "uk": "Lachin"
+            },
+            "cities": [
+                {
+                    "key": "lachin",
+                    "name": {
+                        "tr": "Laçın",
+                        "en": "Lachin",
+                        "ar": "Lachin",
+                        "az": "Laçın",
+                        "de": "Lachin",
+                        "fr": "Lachin",
+                        "ka": "Lachin",
+                        "pl": "Lachin",
+                        "ro": "Lachin",
+                        "ru": "Laçın",
+                        "uk": "Lachin"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "lankaran",
+            "name": {
+                "tr": "Lənkəran",
+                "en": "Lankaran",
+                "ar": "Lankaran",
+                "az": "Lənkəran",
+                "de": "Lankaran",
+                "fr": "Lankaran",
+                "ka": "Lankaran",
+                "pl": "Lankaran",
+                "ro": "Lankaran",
+                "ru": "Ленкорань",
+                "uk": "Ленкорань"
+            },
+            "cities": [
+                {
+                    "key": "lankaran",
+                    "name": {
+                        "tr": "Lənkəran",
+                        "en": "Lankaran",
+                        "ar": "Lankaran",
+                        "az": "Lənkəran",
+                        "de": "Lankaran",
+                        "fr": "Lankaran",
+                        "ka": "Lankaran",
+                        "pl": "Lankaran",
+                        "ro": "Lankaran",
+                        "ru": "Ленкорань",
+                        "uk": "Ленкорань"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "lerik",
+            "name": {
+                "tr": "Lerik",
+                "en": "Lerik",
+                "ar": "Lerik",
+                "az": "Lerik",
+                "de": "Lerik",
+                "fr": "Lerik",
+                "ka": "Lerik",
+                "pl": "Lerik",
+                "ro": "Lerik",
+                "ru": "Lerik",
+                "uk": "Lerik"
+            },
+            "cities": [
+                {
+                    "key": "lerik",
+                    "name": {
+                        "tr": "Lerik",
+                        "en": "Lerik",
+                        "ar": "Lerik",
+                        "az": "Lerik",
+                        "de": "Lerik",
+                        "fr": "Lerik",
+                        "ka": "Lerik",
+                        "pl": "Lerik",
+                        "ro": "Lerik",
+                        "ru": "Lerik",
+                        "uk": "Lerik"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "masally",
+            "name": {
+                "tr": "Masallı",
+                "en": "Masally",
+                "ar": "Masally",
+                "az": "Masallı",
+                "de": "Masally",
+                "fr": "Masally",
+                "ka": "Masally",
+                "pl": "Masally",
+                "ro": "Masally",
+                "ru": "Masallı",
+                "uk": "Masally"
+            },
+            "cities": [
+                {
+                    "key": "masally",
+                    "name": {
+                        "tr": "Masallı",
+                        "en": "Masally",
+                        "ar": "Masally",
+                        "az": "Masallı",
+                        "de": "Masally",
+                        "fr": "Masally",
+                        "ka": "Masally",
+                        "pl": "Masally",
+                        "ro": "Masally",
+                        "ru": "Masallı",
+                        "uk": "Masally"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "mingachevir",
+            "name": {
+                "tr": "Mingəçevir",
+                "en": "Mingachevir",
+                "ar": "Mingachevir",
+                "az": "Mingəçevir",
+                "de": "Mingachevir",
+                "fr": "Mingachevir",
+                "ka": "Mingachevir",
+                "pl": "Mingachevir",
+                "ro": "Mingachevir",
+                "ru": "Мингечевир",
+                "uk": "Мингечевир"
+            },
+            "cities": [
+                {
+                    "key": "mingachevir",
+                    "name": {
+                        "tr": "Mingəçevir",
+                        "en": "Mingachevir",
+                        "ar": "Mingachevir",
+                        "az": "Mingəçevir",
+                        "de": "Mingachevir",
+                        "fr": "Mingachevir",
+                        "ka": "Mingachevir",
+                        "pl": "Mingachevir",
+                        "ro": "Mingachevir",
+                        "ru": "Мингечевир",
+                        "uk": "Мингечевир"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "naftalan",
+            "name": {
+                "tr": "Naftalan",
+                "en": "Naftalan",
+                "ar": "Naftalan",
+                "az": "Naftalan",
+                "de": "Naftalan",
+                "fr": "Naftalan",
+                "ka": "Naftalan",
+                "pl": "Naftalan",
+                "ro": "Naftalan",
+                "ru": "Naftalan",
+                "uk": "Naftalan"
+            },
+            "cities": [
+                {
+                    "key": "naftalan",
+                    "name": {
+                        "tr": "Naftalan",
+                        "en": "Naftalan",
+                        "ar": "Naftalan",
+                        "az": "Naftalan",
+                        "de": "Naftalan",
+                        "fr": "Naftalan",
+                        "ka": "Naftalan",
+                        "pl": "Naftalan",
+                        "ro": "Naftalan",
+                        "ru": "Naftalan",
+                        "uk": "Naftalan"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "nakhchivan",
+            "name": {
+                "tr": "Naxçıvan",
+                "en": "Nakhchivan",
+                "ar": "Nakhchivan",
+                "az": "Naxçıvan",
+                "de": "Nakhchivan",
+                "fr": "Nakhchivan",
+                "ka": "Nakhchivan",
+                "pl": "Nakhchivan",
+                "ro": "Nakhchivan",
+                "ru": "Нахичевань",
+                "uk": "Нахичевань"
+            },
+            "cities": [
+                {
+                    "key": "nakhchivan",
+                    "name": {
+                        "tr": "Naxçıvan",
+                        "en": "Nakhchivan",
+                        "ar": "Nakhchivan",
+                        "az": "Naxçıvan",
+                        "de": "Nakhchivan",
+                        "fr": "Nakhchivan",
+                        "ka": "Nakhchivan",
+                        "pl": "Nakhchivan",
+                        "ro": "Nakhchivan",
+                        "ru": "Нахичевань",
+                        "uk": "Нахичевань"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "neftchala",
+            "name": {
+                "tr": "Neftçala",
+                "en": "Neftchala",
+                "ar": "Neftchala",
+                "az": "Neftçala",
+                "de": "Neftchala",
+                "fr": "Neftchala",
+                "ka": "Neftchala",
+                "pl": "Neftchala",
+                "ro": "Neftchala",
+                "ru": "Neftçala",
+                "uk": "Neftchala"
+            },
+            "cities": [
+                {
+                    "key": "neftchala",
+                    "name": {
+                        "tr": "Neftçala",
+                        "en": "Neftchala",
+                        "ar": "Neftchala",
+                        "az": "Neftçala",
+                        "de": "Neftchala",
+                        "fr": "Neftchala",
+                        "ka": "Neftchala",
+                        "pl": "Neftchala",
+                        "ro": "Neftchala",
+                        "ru": "Neftçala",
+                        "uk": "Neftchala"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "oghuz",
+            "name": {
+                "tr": "Oğuz",
+                "en": "Oghuz",
+                "ar": "Oghuz",
+                "az": "Oğuz",
+                "de": "Oghuz",
+                "fr": "Oghuz",
+                "ka": "Oghuz",
+                "pl": "Oghuz",
+                "ro": "Oghuz",
+                "ru": "Oğuz",
+                "uk": "Oghuz"
+            },
+            "cities": [
+                {
+                    "key": "oghuz",
+                    "name": {
+                        "tr": "Oğuz",
+                        "en": "Oghuz",
+                        "ar": "Oghuz",
+                        "az": "Oğuz",
+                        "de": "Oghuz",
+                        "fr": "Oghuz",
+                        "ka": "Oghuz",
+                        "pl": "Oghuz",
+                        "ro": "Oghuz",
+                        "ru": "Oğuz",
+                        "uk": "Oghuz"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "ordubad",
+            "name": {
+                "tr": "Ordubad",
+                "en": "Ordubad",
+                "ar": "Ordubad",
+                "az": "Ordubad",
+                "de": "Ordubad",
+                "fr": "Ordubad",
+                "ka": "Ordubad",
+                "pl": "Ordubad",
+                "ro": "Ordubad",
+                "ru": "Ordubad",
+                "uk": "Ordubad"
+            },
+            "cities": [
+                {
+                    "key": "ordubad",
+                    "name": {
+                        "tr": "Ordubad",
+                        "en": "Ordubad",
+                        "ar": "Ordubad",
+                        "az": "Ordubad",
+                        "de": "Ordubad",
+                        "fr": "Ordubad",
+                        "ka": "Ordubad",
+                        "pl": "Ordubad",
+                        "ro": "Ordubad",
+                        "ru": "Ordubad",
+                        "uk": "Ordubad"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "qabala",
+            "name": {
+                "tr": "Qəbələ",
+                "en": "Gabala",
+                "ar": "Gabala",
+                "az": "Qəbələ",
+                "de": "Gabala",
+                "fr": "Gabala",
+                "ka": "Gabala",
+                "pl": "Gabala",
+                "ro": "Gabala",
+                "ru": "Qəbələ",
+                "uk": "Gabala"
+            },
+            "cities": [
+                {
+                    "key": "qabala",
+                    "name": {
+                        "tr": "Qəbələ",
+                        "en": "Gabala",
+                        "ar": "Gabala",
+                        "az": "Qəbələ",
+                        "de": "Gabala",
+                        "fr": "Gabala",
+                        "ka": "Gabala",
+                        "pl": "Gabala",
+                        "ro": "Gabala",
+                        "ru": "Qəbələ",
+                        "uk": "Gabala"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "qakh",
+            "name": {
+                "tr": "Qax",
+                "en": "Gakh",
+                "ar": "Gakh",
+                "az": "Qax",
+                "de": "Gakh",
+                "fr": "Gakh",
+                "ka": "Gakh",
+                "pl": "Gakh",
+                "ro": "Gakh",
+                "ru": "Qax",
+                "uk": "Gakh"
+            },
+            "cities": [
+                {
+                    "key": "qakh",
+                    "name": {
+                        "tr": "Qax",
+                        "en": "Gakh",
+                        "ar": "Gakh",
+                        "az": "Qax",
+                        "de": "Gakh",
+                        "fr": "Gakh",
+                        "ka": "Gakh",
+                        "pl": "Gakh",
+                        "ro": "Gakh",
+                        "ru": "Qax",
+                        "uk": "Gakh"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "qazakh",
+            "name": {
+                "tr": "Qazax",
+                "en": "Gazakh",
+                "ar": "Gazakh",
+                "az": "Qazax",
+                "de": "Gazakh",
+                "fr": "Gazakh",
+                "ka": "Gazakh",
+                "pl": "Gazakh",
+                "ro": "Gazakh",
+                "ru": "Qazax",
+                "uk": "Gazakh"
+            },
+            "cities": [
+                {
+                    "key": "qazakh",
+                    "name": {
+                        "tr": "Qazax",
+                        "en": "Gazakh",
+                        "ar": "Gazakh",
+                        "az": "Qazax",
+                        "de": "Gazakh",
+                        "fr": "Gazakh",
+                        "ka": "Gazakh",
+                        "pl": "Gazakh",
+                        "ro": "Gazakh",
+                        "ru": "Qazax",
+                        "uk": "Gazakh"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "quba",
+            "name": {
+                "tr": "Quba",
+                "en": "Guba",
+                "ar": "Guba",
+                "az": "Quba",
+                "de": "Guba",
+                "fr": "Guba",
+                "ka": "Guba",
+                "pl": "Guba",
+                "ro": "Guba",
+                "ru": "Quba",
+                "uk": "Guba"
+            },
+            "cities": [
+                {
+                    "key": "quba",
+                    "name": {
+                        "tr": "Quba",
+                        "en": "Guba",
+                        "ar": "Guba",
+                        "az": "Quba",
+                        "de": "Guba",
+                        "fr": "Guba",
+                        "ka": "Guba",
+                        "pl": "Guba",
+                        "ro": "Guba",
+                        "ru": "Quba",
+                        "uk": "Guba"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "qubadli",
+            "name": {
+                "tr": "Qubadlı",
+                "en": "Gubadli",
+                "ar": "Gubadli",
+                "az": "Qubadlı",
+                "de": "Gubadli",
+                "fr": "Gubadli",
+                "ka": "Gubadli",
+                "pl": "Gubadli",
+                "ro": "Gubadli",
+                "ru": "Qubadlı",
+                "uk": "Gubadli"
+            },
+            "cities": [
+                {
+                    "key": "qubadli",
+                    "name": {
+                        "tr": "Qubadlı",
+                        "en": "Gubadli",
+                        "ar": "Gubadli",
+                        "az": "Qubadlı",
+                        "de": "Gubadli",
+                        "fr": "Gubadli",
+                        "ka": "Gubadli",
+                        "pl": "Gubadli",
+                        "ro": "Gubadli",
+                        "ru": "Qubadlı",
+                        "uk": "Gubadli"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "qusar",
+            "name": {
+                "tr": "Qusar",
+                "en": "Gusar",
+                "ar": "Gusar",
+                "az": "Qusar",
+                "de": "Gusar",
+                "fr": "Gusar",
+                "ka": "Gusar",
+                "pl": "Gusar",
+                "ro": "Gusar",
+                "ru": "Qusar",
+                "uk": "Gusar"
+            },
+            "cities": [
+                {
+                    "key": "qusar",
+                    "name": {
+                        "tr": "Qusar",
+                        "en": "Gusar",
+                        "ar": "Gusar",
+                        "az": "Qusar",
+                        "de": "Gusar",
+                        "fr": "Gusar",
+                        "ka": "Gusar",
+                        "pl": "Gusar",
+                        "ro": "Gusar",
+                        "ru": "Qusar",
+                        "uk": "Gusar"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "saatly",
+            "name": {
+                "tr": "Saatlı",
+                "en": "Saatly",
+                "ar": "Saatly",
+                "az": "Saatlı",
+                "de": "Saatly",
+                "fr": "Saatly",
+                "ka": "Saatly",
+                "pl": "Saatly",
+                "ro": "Saatly",
+                "ru": "Saatlı",
+                "uk": "Saatly"
+            },
+            "cities": [
+                {
+                    "key": "saatly",
+                    "name": {
+                        "tr": "Saatlı",
+                        "en": "Saatly",
+                        "ar": "Saatly",
+                        "az": "Saatlı",
+                        "de": "Saatly",
+                        "fr": "Saatly",
+                        "ka": "Saatly",
+                        "pl": "Saatly",
+                        "ro": "Saatly",
+                        "ru": "Saatlı",
+                        "uk": "Saatly"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "sabirabad",
+            "name": {
+                "tr": "Sabirabad",
+                "en": "Sabirabad",
+                "ar": "Sabirabad",
+                "az": "Sabirabad",
+                "de": "Sabirabad",
+                "fr": "Sabirabad",
+                "ka": "Sabirabad",
+                "pl": "Sabirabad",
+                "ro": "Sabirabad",
+                "ru": "Sabirabad",
+                "uk": "Sabirabad"
+            },
+            "cities": [
+                {
+                    "key": "sabirabad",
+                    "name": {
+                        "tr": "Sabirabad",
+                        "en": "Sabirabad",
+                        "ar": "Sabirabad",
+                        "az": "Sabirabad",
+                        "de": "Sabirabad",
+                        "fr": "Sabirabad",
+                        "ka": "Sabirabad",
+                        "pl": "Sabirabad",
+                        "ro": "Sabirabad",
+                        "ru": "Sabirabad",
+                        "uk": "Sabirabad"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "sadarak",
+            "name": {
+                "tr": "Sədərək",
+                "en": "Sadarak",
+                "ar": "Sadarak",
+                "az": "Sədərək",
+                "de": "Sadarak",
+                "fr": "Sadarak",
+                "ka": "Sadarak",
+                "pl": "Sadarak",
+                "ro": "Sadarak",
+                "ru": "Sədərək",
+                "uk": "Sadarak"
+            },
+            "cities": [
+                {
+                    "key": "sadarak",
+                    "name": {
+                        "tr": "Sədərək",
+                        "en": "Sadarak",
+                        "ar": "Sadarak",
+                        "az": "Sədərək",
+                        "de": "Sadarak",
+                        "fr": "Sadarak",
+                        "ka": "Sadarak",
+                        "pl": "Sadarak",
+                        "ro": "Sadarak",
+                        "ru": "Sədərək",
+                        "uk": "Sadarak"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "salyan",
+            "name": {
+                "tr": "Salyan",
+                "en": "Salyan",
+                "ar": "Salyan",
+                "az": "Salyan",
+                "de": "Salyan",
+                "fr": "Salyan",
+                "ka": "Salyan",
+                "pl": "Salyan",
+                "ro": "Salyan",
+                "ru": "Salyan",
+                "uk": "Salyan"
+            },
+            "cities": [
+                {
+                    "key": "salyan",
+                    "name": {
+                        "tr": "Salyan",
+                        "en": "Salyan",
+                        "ar": "Salyan",
+                        "az": "Salyan",
+                        "de": "Salyan",
+                        "fr": "Salyan",
+                        "ka": "Salyan",
+                        "pl": "Salyan",
+                        "ro": "Salyan",
+                        "ru": "Salyan",
+                        "uk": "Salyan"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "samukh",
+            "name": {
+                "tr": "Samux",
+                "en": "Samukh",
+                "ar": "Samukh",
+                "az": "Samux",
+                "de": "Samukh",
+                "fr": "Samukh",
+                "ka": "Samukh",
+                "pl": "Samukh",
+                "ro": "Samukh",
+                "ru": "Samux",
+                "uk": "Samukh"
+            },
+            "cities": [
+                {
+                    "key": "samukh",
+                    "name": {
+                        "tr": "Samux",
+                        "en": "Samukh",
+                        "ar": "Samukh",
+                        "az": "Samux",
+                        "de": "Samukh",
+                        "fr": "Samukh",
+                        "ka": "Samukh",
+                        "pl": "Samukh",
+                        "ro": "Samukh",
+                        "ru": "Samux",
+                        "uk": "Samukh"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "shabran",
+            "name": {
+                "tr": "Şabran",
+                "en": "Shabran",
+                "ar": "Shabran",
+                "az": "Şabran",
+                "de": "Shabran",
+                "fr": "Shabran",
+                "ka": "Shabran",
+                "pl": "Shabran",
+                "ro": "Shabran",
+                "ru": "Şabran",
+                "uk": "Shabran"
+            },
+            "cities": [
+                {
+                    "key": "shabran",
+                    "name": {
+                        "tr": "Şabran",
+                        "en": "Shabran",
+                        "ar": "Shabran",
+                        "az": "Şabran",
+                        "de": "Shabran",
+                        "fr": "Shabran",
+                        "ka": "Shabran",
+                        "pl": "Shabran",
+                        "ro": "Shabran",
+                        "ru": "Şabran",
+                        "uk": "Shabran"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "shahbuz",
+            "name": {
+                "tr": "Şahbuz",
+                "en": "Shahbuz",
+                "ar": "Shahbuz",
+                "az": "Şahbuz",
+                "de": "Shahbuz",
+                "fr": "Shahbuz",
+                "ka": "Shahbuz",
+                "pl": "Shahbuz",
+                "ro": "Shahbuz",
+                "ru": "Şahbuz",
+                "uk": "Shahbuz"
+            },
+            "cities": [
+                {
+                    "key": "shahbuz",
+                    "name": {
+                        "tr": "Şahbuz",
+                        "en": "Shahbuz",
+                        "ar": "Shahbuz",
+                        "az": "Şahbuz",
+                        "de": "Shahbuz",
+                        "fr": "Shahbuz",
+                        "ka": "Shahbuz",
+                        "pl": "Shahbuz",
+                        "ro": "Shahbuz",
+                        "ru": "Şahbuz",
+                        "uk": "Shahbuz"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "shaki",
+            "name": {
+                "tr": "Şəki",
+                "en": "Shaki",
+                "ar": "Shaki",
+                "az": "Şəki",
+                "de": "Shaki",
+                "fr": "Shaki",
+                "ka": "Shaki",
+                "pl": "Shaki",
+                "ro": "Shaki",
+                "ru": "Шеки",
+                "uk": "Шеки"
+            },
+            "cities": [
+                {
+                    "key": "shaki",
+                    "name": {
+                        "tr": "Şəki",
+                        "en": "Shaki",
+                        "ar": "Shaki",
+                        "az": "Şəki",
+                        "de": "Shaki",
+                        "fr": "Shaki",
+                        "ka": "Shaki",
+                        "pl": "Shaki",
+                        "ro": "Shaki",
+                        "ru": "Шеки",
+                        "uk": "Шеки"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "shamakhi",
+            "name": {
+                "tr": "Şamaxı",
+                "en": "Shamakhi",
+                "ar": "Shamakhi",
+                "az": "Şamaxı",
+                "de": "Shamakhi",
+                "fr": "Shamakhi",
+                "ka": "Shamakhi",
+                "pl": "Shamakhi",
+                "ro": "Shamakhi",
+                "ru": "Şamaxı",
+                "uk": "Shamakhi"
+            },
+            "cities": [
+                {
+                    "key": "shamakhi",
+                    "name": {
+                        "tr": "Şamaxı",
+                        "en": "Shamakhi",
+                        "ar": "Shamakhi",
+                        "az": "Şamaxı",
+                        "de": "Shamakhi",
+                        "fr": "Shamakhi",
+                        "ka": "Shamakhi",
+                        "pl": "Shamakhi",
+                        "ro": "Shamakhi",
+                        "ru": "Şamaxı",
+                        "uk": "Shamakhi"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "shamkir",
+            "name": {
+                "tr": "Şəmkir",
+                "en": "Shamkir",
+                "ar": "Shamkir",
+                "az": "Şəmkir",
+                "de": "Shamkir",
+                "fr": "Shamkir",
+                "ka": "Shamkir",
+                "pl": "Shamkir",
+                "ro": "Shamkir",
+                "ru": "Şəmkir",
+                "uk": "Shamkir"
+            },
+            "cities": [
+                {
+                    "key": "shamkir",
+                    "name": {
+                        "tr": "Şəmkir",
+                        "en": "Shamkir",
+                        "ar": "Shamkir",
+                        "az": "Şəmkir",
+                        "de": "Shamkir",
+                        "fr": "Shamkir",
+                        "ka": "Shamkir",
+                        "pl": "Shamkir",
+                        "ro": "Shamkir",
+                        "ru": "Şəmkir",
+                        "uk": "Shamkir"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "sharur",
+            "name": {
+                "tr": "Şərur",
+                "en": "Sharur",
+                "ar": "Sharur",
+                "az": "Şərur",
+                "de": "Sharur",
+                "fr": "Sharur",
+                "ka": "Sharur",
+                "pl": "Sharur",
+                "ro": "Sharur",
+                "ru": "Şərur",
+                "uk": "Sharur"
+            },
+            "cities": [
+                {
+                    "key": "sharur",
+                    "name": {
+                        "tr": "Şərur",
+                        "en": "Sharur",
+                        "ar": "Sharur",
+                        "az": "Şərur",
+                        "de": "Sharur",
+                        "fr": "Sharur",
+                        "ka": "Sharur",
+                        "pl": "Sharur",
+                        "ro": "Sharur",
+                        "ru": "Şərur",
+                        "uk": "Sharur"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "shirvan",
+            "name": {
+                "tr": "Şirvan",
+                "en": "Shirvan",
+                "ar": "Shirvan",
+                "az": "Şirvan",
+                "de": "Shirvan",
+                "fr": "Shirvan",
+                "ka": "Shirvan",
+                "pl": "Shirvan",
+                "ro": "Shirvan",
+                "ru": "Ширван",
+                "uk": "Ширван"
+            },
+            "cities": [
+                {
+                    "key": "shirvan",
+                    "name": {
+                        "tr": "Şirvan",
+                        "en": "Shirvan",
+                        "ar": "Shirvan",
+                        "az": "Şirvan",
+                        "de": "Shirvan",
+                        "fr": "Shirvan",
+                        "ka": "Shirvan",
+                        "pl": "Shirvan",
+                        "ro": "Shirvan",
+                        "ru": "Ширван",
+                        "uk": "Ширван"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "shusha",
+            "name": {
+                "tr": "Şuşa",
+                "en": "Shusha",
+                "ar": "Shusha",
+                "az": "Şuşa",
+                "de": "Shusha",
+                "fr": "Shusha",
+                "ka": "Shusha",
+                "pl": "Shusha",
+                "ro": "Shusha",
+                "ru": "Шуша",
+                "uk": "Шуша"
+            },
+            "cities": [
+                {
+                    "key": "shusha",
+                    "name": {
+                        "tr": "Şuşa",
+                        "en": "Shusha",
+                        "ar": "Shusha",
+                        "az": "Şuşa",
+                        "de": "Shusha",
+                        "fr": "Shusha",
+                        "ka": "Shusha",
+                        "pl": "Shusha",
+                        "ro": "Shusha",
+                        "ru": "Шуша",
+                        "uk": "Шуша"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "siazan",
+            "name": {
+                "tr": "Siyəzən",
+                "en": "Siazan",
+                "ar": "Siazan",
+                "az": "Siyəzən",
+                "de": "Siazan",
+                "fr": "Siazan",
+                "ka": "Siazan",
+                "pl": "Siazan",
+                "ro": "Siazan",
+                "ru": "Siyəzən",
+                "uk": "Siazan"
+            },
+            "cities": [
+                {
+                    "key": "siazan",
+                    "name": {
+                        "tr": "Siyəzən",
+                        "en": "Siazan",
+                        "ar": "Siazan",
+                        "az": "Siyəzən",
+                        "de": "Siazan",
+                        "fr": "Siazan",
+                        "ka": "Siazan",
+                        "pl": "Siazan",
+                        "ro": "Siazan",
+                        "ru": "Siyəzən",
+                        "uk": "Siazan"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "sumqayit",
+            "name": {
+                "tr": "Sumqayıt",
+                "en": "Sumgayit",
+                "ar": "Sumgayit",
+                "az": "Sumqayıt",
+                "de": "Sumgayit",
+                "fr": "Sumgayit",
+                "ka": "Sumgayit",
+                "pl": "Sumgayit",
+                "ro": "Sumgayit",
+                "ru": "Сумгаит",
+                "uk": "Сумгаит"
+            },
+            "cities": [
+                {
+                    "key": "sumqayit",
+                    "name": {
+                        "tr": "Sumqayıt",
+                        "en": "Sumgayit",
+                        "ar": "Sumgayit",
+                        "az": "Sumqayıt",
+                        "de": "Sumgayit",
+                        "fr": "Sumgayit",
+                        "ka": "Sumgayit",
+                        "pl": "Sumgayit",
+                        "ro": "Sumgayit",
+                        "ru": "Сумгаит",
+                        "uk": "Сумгаит"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "tartar",
+            "name": {
+                "tr": "Tərtər",
+                "en": "Tartar",
+                "ar": "Tartar",
+                "az": "Tərtər",
+                "de": "Tartar",
+                "fr": "Tartar",
+                "ka": "Tartar",
+                "pl": "Tartar",
+                "ro": "Tartar",
+                "ru": "Tərtər",
+                "uk": "Tartar"
+            },
+            "cities": [
+                {
+                    "key": "tartar",
+                    "name": {
+                        "tr": "Tərtər",
+                        "en": "Tartar",
+                        "ar": "Tartar",
+                        "az": "Tərtər",
+                        "de": "Tartar",
+                        "fr": "Tartar",
+                        "ka": "Tartar",
+                        "pl": "Tartar",
+                        "ro": "Tartar",
+                        "ru": "Tərtər",
+                        "uk": "Tartar"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "tovuz",
+            "name": {
+                "tr": "Tovuz",
+                "en": "Tovuz",
+                "ar": "Tovuz",
+                "az": "Tovuz",
+                "de": "Tovuz",
+                "fr": "Tovuz",
+                "ka": "Tovuz",
+                "pl": "Tovuz",
+                "ro": "Tovuz",
+                "ru": "Tovuz",
+                "uk": "Tovuz"
+            },
+            "cities": [
+                {
+                    "key": "tovuz",
+                    "name": {
+                        "tr": "Tovuz",
+                        "en": "Tovuz",
+                        "ar": "Tovuz",
+                        "az": "Tovuz",
+                        "de": "Tovuz",
+                        "fr": "Tovuz",
+                        "ka": "Tovuz",
+                        "pl": "Tovuz",
+                        "ro": "Tovuz",
+                        "ru": "Tovuz",
+                        "uk": "Tovuz"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "ujar",
+            "name": {
+                "tr": "Ucar",
+                "en": "Ujar",
+                "ar": "Ujar",
+                "az": "Ucar",
+                "de": "Ujar",
+                "fr": "Ujar",
+                "ka": "Ujar",
+                "pl": "Ujar",
+                "ro": "Ujar",
+                "ru": "Ucar",
+                "uk": "Ujar"
+            },
+            "cities": [
+                {
+                    "key": "ujar",
+                    "name": {
+                        "tr": "Ucar",
+                        "en": "Ujar",
+                        "ar": "Ujar",
+                        "az": "Ucar",
+                        "de": "Ujar",
+                        "fr": "Ujar",
+                        "ka": "Ujar",
+                        "pl": "Ujar",
+                        "ro": "Ujar",
+                        "ru": "Ucar",
+                        "uk": "Ujar"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "yardymli",
+            "name": {
+                "tr": "Yardımlı",
+                "en": "Yardymli",
+                "ar": "Yardymli",
+                "az": "Yardımlı",
+                "de": "Yardymli",
+                "fr": "Yardymli",
+                "ka": "Yardymli",
+                "pl": "Yardymli",
+                "ro": "Yardymli",
+                "ru": "Yardımlı",
+                "uk": "Yardymli"
+            },
+            "cities": [
+                {
+                    "key": "yardymli",
+                    "name": {
+                        "tr": "Yardımlı",
+                        "en": "Yardymli",
+                        "ar": "Yardymli",
+                        "az": "Yardımlı",
+                        "de": "Yardymli",
+                        "fr": "Yardymli",
+                        "ka": "Yardymli",
+                        "pl": "Yardymli",
+                        "ro": "Yardymli",
+                        "ru": "Yardımlı",
+                        "uk": "Yardymli"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "yevlakh",
+            "name": {
+                "tr": "Yevlax",
+                "en": "Yevlakh",
+                "ar": "Yevlakh",
+                "az": "Yevlax",
+                "de": "Yevlakh",
+                "fr": "Yevlakh",
+                "ka": "Yevlakh",
+                "pl": "Yevlakh",
+                "ro": "Yevlakh",
+                "ru": "Евлах",
+                "uk": "Евлах"
+            },
+            "cities": [
+                {
+                    "key": "yevlakh",
+                    "name": {
+                        "tr": "Yevlax",
+                        "en": "Yevlakh",
+                        "ar": "Yevlakh",
+                        "az": "Yevlax",
+                        "de": "Yevlakh",
+                        "fr": "Yevlakh",
+                        "ka": "Yevlakh",
+                        "pl": "Yevlakh",
+                        "ro": "Yevlakh",
+                        "ru": "Евлах",
+                        "uk": "Евлах"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "zangilan",
+            "name": {
+                "tr": "Zəngilan",
+                "en": "Zangilan",
+                "ar": "Zangilan",
+                "az": "Zəngilan",
+                "de": "Zangilan",
+                "fr": "Zangilan",
+                "ka": "Zangilan",
+                "pl": "Zangilan",
+                "ro": "Zangilan",
+                "ru": "Zəngilan",
+                "uk": "Zangilan"
+            },
+            "cities": [
+                {
+                    "key": "zangilan",
+                    "name": {
+                        "tr": "Zəngilan",
+                        "en": "Zangilan",
+                        "ar": "Zangilan",
+                        "az": "Zəngilan",
+                        "de": "Zangilan",
+                        "fr": "Zangilan",
+                        "ka": "Zangilan",
+                        "pl": "Zangilan",
+                        "ro": "Zangilan",
+                        "ru": "Zəngilan",
+                        "uk": "Zangilan"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "zaqatala",
+            "name": {
+                "tr": "Zaqatala",
+                "en": "Zaqatala",
+                "ar": "Zaqatala",
+                "az": "Zaqatala",
+                "de": "Zaqatala",
+                "fr": "Zaqatala",
+                "ka": "Zaqatala",
+                "pl": "Zaqatala",
+                "ro": "Zaqatala",
+                "ru": "Zaqatala",
+                "uk": "Zaqatala"
+            },
+            "cities": [
+                {
+                    "key": "zaqatala",
+                    "name": {
+                        "tr": "Zaqatala",
+                        "en": "Zaqatala",
+                        "ar": "Zaqatala",
+                        "az": "Zaqatala",
+                        "de": "Zaqatala",
+                        "fr": "Zaqatala",
+                        "ka": "Zaqatala",
+                        "pl": "Zaqatala",
+                        "ro": "Zaqatala",
+                        "ru": "Zaqatala",
+                        "uk": "Zaqatala"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "zardab",
+            "name": {
+                "tr": "Zərdab",
+                "en": "Zardab",
+                "ar": "Zardab",
+                "az": "Zərdab",
+                "de": "Zardab",
+                "fr": "Zardab",
+                "ka": "Zardab",
+                "pl": "Zardab",
+                "ro": "Zardab",
+                "ru": "Zərdab",
+                "uk": "Zardab"
+            },
+            "cities": [
+                {
+                    "key": "zardab",
+                    "name": {
+                        "tr": "Zərdab",
+                        "en": "Zardab",
+                        "ar": "Zardab",
+                        "az": "Zərdab",
+                        "de": "Zardab",
+                        "fr": "Zardab",
+                        "ka": "Zardab",
+                        "pl": "Zardab",
+                        "ro": "Zardab",
+                        "ru": "Zərdab",
+                        "uk": "Zardab"
+                    }
+                }
+            ]
+        }
+    ]
+}
