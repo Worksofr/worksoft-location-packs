@@ -28,7 +28,7 @@
             "id": "tr",
             "iso2": "TR",
             "code": "TR",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "default_locale": "tr",
             "path": "packs/tr/locations.json",
             "states_count": 81,

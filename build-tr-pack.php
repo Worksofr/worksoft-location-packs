@@ -19,18 +19,13 @@ if (! is_file($sourcePath)) {
 $map = json_decode((string) file_get_contents($sourcePath), true, 512, JSON_THROW_ON_ERROR);
 
 /**
- * İl/ilçe için tüm locale’lerde aynı Türkçe ad (özel isimler çevrilmez).
+ * İl/ilçe: yalnızca Türkçe (özel ad). Diğer diller ana kolona düşer.
  *
  * @return array<string, string>
  */
 function placeName(string $tr, array $locales): array
 {
-    $out = [];
-    foreach ($locales as $loc) {
-        $out[$loc] = $tr;
-    }
-
-    return $out;
+    return ['tr' => $tr];
 }
 
 /**
@@ -122,11 +117,11 @@ $pack = [
     'id' => 'tr',
     'iso2' => 'TR',
     'code' => 'TR',
-    'version' => '1.0.0',
+    'version' => '1.0.1',
     'default_locale' => 'tr',
     'notes' => [
-        'tr' => 'Yalnızca 81 il ve ilçeler. Köy / mahalle yok. Ülke adı 11 dilde.',
-        'en' => '81 provinces and districts only. No villages. Country name in 11 locales.',
+        'tr' => 'Yalnızca 81 il ve ilçeler (Türkçe özel ad). Köy yok. Ülke adı 11 dilde.',
+        'en' => '81 provinces/districts (Turkish proper names). No villages. Country name in 11 locales.',
     ],
     'country' => [
         'name' => $countryNames,
@@ -149,7 +144,7 @@ file_put_contents(
     $outDir.'/pack.json',
     json_encode([
         'id' => 'tr',
-        'version' => '1.0.0',
+        'version' => '1.0.1',
         'iso2' => 'TR',
         'code' => 'TR',
     ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n"
@@ -173,7 +168,7 @@ $trMeta = [
     'id' => 'tr',
     'iso2' => 'TR',
     'code' => 'TR',
-    'version' => '1.0.0',
+    'version' => '1.0.1',
     'default_locale' => 'tr',
     'path' => 'packs/tr/locations.json',
     'states_count' => count($states),
