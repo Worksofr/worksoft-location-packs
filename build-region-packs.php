@@ -1,13 +1,16 @@
 <?php
 /**
- * AB-27 + GE/UA/SY/AE konum paketleri üretici.
- * Kaynak: dr5hn/countries-states-cities-database (ODbL).
- * AZ/TR paketlerine dokunmaz.
+ * AB-27 + GE/UA/SY/AE konum paketleri üretici (v1.1.0).
+ * İl/ilçe adları: dr5hn translations.csv (11 dil) + name/native.
+ * AZ/TR dokunulmaz.
  */
+error_reporting(E_ALL & ~E_DEPRECATED);
+ini_set('memory_limit', '1024M');
 
 $root = __DIR__;
 $sourcesDir = $root.'/sources/dr5hn';
 $dataI18n = $root.'/data/country-i18n.php';
+$locales = ['tr', 'en', 'ar', 'az', 'de', 'fr', 'ka', 'pl', 'ro', 'ru', 'uk'];
 
 if (! is_file($dataI18n)) {
     fwrite(STDERR, "Run generate-country-i18n.php first\n");
@@ -23,32 +26,30 @@ if (! is_dir($sourcesDir)) {
 
 $combinedJson = $sourcesDir.'/countries-states-cities.json';
 $combinedUrl = 'https://github.com/dr5hn/countries-states-cities-database/releases/download/v3.2-export.7/json-countries+states+cities.json.gz';
+$translationsCsv = $sourcesDir.'/translations.csv';
+$translationsGzUrl = 'https://github.com/dr5hn/countries-states-cities-database/releases/download/v3.2-export.7/csv-translations.csv.gz';
 
 if (! is_file($combinedJson) || filesize($combinedJson) < 1000) {
-    echo "Downloading combined countries+states+cities...\n";
+    echo "Downloading combined JSON...\n";
     $gzPath = $sourcesDir.'/countries-states-cities.json.gz';
-    // curl daha güvenilir (redirect + SSL)
-    // Windows: + içeren URL’yi doğrudan tırnakla ver
-    $cmd = 'curl.exe -L --fail --retry 3 -o "'.$gzPath.'" "'.$combinedUrl.'"';
-    passthru($cmd, $code);
-    if ($code !== 0 || ! is_file($gzPath)) {
-        fwrite(STDERR, "Download failed (exit $code)\n");
+    passthru('curl.exe -L --fail --retry 3 -o "'.$gzPath.'" "'.$combinedUrl.'"', $code);
+    if ($code !== 0) {
         exit(1);
     }
-    $raw = file_get_contents($gzPath);
-    $json = gzdecode($raw);
-    if ($json === false) {
-        fwrite(STDERR, "gunzip failed\n");
-        exit(1);
-    }
-    file_put_contents($combinedJson, $json);
-    echo 'Saved '.strlen($json)." bytes\n";
-} else {
-    echo "Cache hit: $combinedJson\n";
+    file_put_contents($combinedJson, gzdecode((string) file_get_contents($gzPath)));
 }
 
-echo "Loading JSON (memory)...\n";
-ini_set('memory_limit', '1024M');
+if (! is_file($translationsCsv) || filesize($translationsCsv) < 1000) {
+    echo "Downloading translations CSV...\n";
+    $gzPath = $sourcesDir.'/translations.csv.gz';
+    passthru('curl.exe -L --fail --retry 3 -o "'.$gzPath.'" "'.$translationsGzUrl.'"', $code);
+    if ($code !== 0) {
+        exit(1);
+    }
+    file_put_contents($translationsCsv, gzdecode((string) file_get_contents($gzPath)));
+}
+
+echo "Loading countries JSON...\n";
 $countriesRaw = json_decode((string) file_get_contents($combinedJson), true, 512, JSON_THROW_ON_ERROR);
 if (isset($countriesRaw['data']) && is_array($countriesRaw['data'])) {
     $countriesRaw = $countriesRaw['data'];
@@ -97,12 +98,43 @@ function uniqueKey(string $base, array &$used): string
     return $key;
 }
 
+/**
+ * @param  array<string, string>  $trMap  "state:123:uk" => "Харківська"
+ * @param  list<string>  $locales
+ * @return array<string, string>
+ */
+function buildPlaceNames(int $placeId, string $type, string $enName, string $native, string $defaultLocale, array $trMap, array $locales): array
+{
+    $out = [];
+    foreach ($locales as $loc) {
+        $k = $type.':'.$placeId.':'.$loc;
+        if (isset($trMap[$k]) && trim($trMap[$k]) !== '') {
+            $out[$loc] = trim($trMap[$k]);
+        }
+    }
+    if ($enName !== '') {
+        $out['en'] = $out['en'] ?? $enName;
+    }
+    if ($native !== '') {
+        // Yerel yazım varsayılan dilde (CSV yoksa)
+        $out[$defaultLocale] = $out[$defaultLocale] ?? $native;
+    }
+    if ($out === [] && $enName !== '') {
+        $out[$defaultLocale] = $enName;
+        $out['en'] = $enName;
+    }
+
+    return $out;
+}
+
 $wantedIso2 = [];
 foreach ($countriesMeta as $meta) {
     $wantedIso2[strtoupper((string) $meta['iso2'])] = true;
 }
 
 $byIso2 = [];
+$wantedStateIds = [];
+$wantedCityIds = [];
 foreach ($countriesRaw as $c) {
     if (! is_array($c)) {
         continue;
@@ -112,12 +144,64 @@ foreach ($countriesRaw as $c) {
         continue;
     }
     $byIso2[$iso2] = $c;
+    foreach ($c['states'] ?? [] as $s) {
+        if (! is_array($s)) {
+            continue;
+        }
+        $sid = (int) ($s['id'] ?? 0);
+        if ($sid > 0) {
+            $wantedStateIds[$sid] = true;
+        }
+        foreach ($s['cities'] ?? [] as $city) {
+            if (! is_array($city)) {
+                continue;
+            }
+            $cid = (int) ($city['id'] ?? 0);
+            if ($cid > 0) {
+                $wantedCityIds[$cid] = true;
+            }
+        }
+    }
 }
 
-echo 'Wanted='.count($wantedIso2).' matched='.count($byIso2).PHP_EOL;
+echo 'Wanted countries='.count($byIso2).' states='.count($wantedStateIds).' cities='.count($wantedCityIds).PHP_EOL;
+echo "Indexing translations CSV (stream)...\n";
+
+/** @var array<string, string> $trMap */
+$trMap = [];
+$localeSet = array_fill_keys($locales, true);
+$fh = fopen($translationsCsv, 'rb');
+if ($fh === false) {
+    fwrite(STDERR, "Cannot open translations.csv\n");
+    exit(1);
+}
+fgetcsv($fh, 0, ',', '"', '\\');
+$matched = 0;
+while (($row = fgetcsv($fh, 0, ',', '"', '\\')) !== false) {
+    if (count($row) < 4) {
+        continue;
+    }
+    $pid = (int) $row[0];
+    $type = (string) $row[1];
+    $lang = (string) $row[2];
+    $text = trim((string) $row[3]);
+    if ($text === '' || ! isset($localeSet[$lang])) {
+        continue;
+    }
+    if ($type === 'state' && isset($wantedStateIds[$pid])) {
+        $trMap['state:'.$pid.':'.$lang] = $text;
+        $matched++;
+    } elseif ($type === 'city' && isset($wantedCityIds[$pid])) {
+        $trMap['city:'.$pid.':'.$lang] = $text;
+        $matched++;
+    }
+}
+fclose($fh);
+echo "Translation entries matched=$matched\n";
 
 $generated = [];
 $preserveIds = ['az', 'tr'];
+$packVersion = '1.1.0';
 
 foreach ($countriesMeta as $meta) {
     $iso2 = strtoupper((string) $meta['iso2']);
@@ -142,14 +226,16 @@ foreach ($countriesMeta as $meta) {
         if (! is_array($state)) {
             continue;
         }
-        $stateName = trim((string) ($state['native'] ?? ''));
-        if ($stateName === '') {
-            $stateName = trim((string) ($state['name'] ?? ''));
-        }
-        if ($stateName === '') {
+        $enName = trim((string) ($state['name'] ?? ''));
+        $native = trim((string) ($state['native'] ?? ''));
+        $labelForKey = $native !== '' ? $native : $enName;
+        if ($labelForKey === '') {
             continue;
         }
-        $stateKey = uniqueKey(placeKey($stateName), $stateUsed);
+        $stateId = (int) ($state['id'] ?? 0);
+        $stateKey = uniqueKey(placeKey($labelForKey), $stateUsed);
+        $stateNames = buildPlaceNames($stateId, 'state', $enName, $native, $defaultLocale, $trMap, $locales);
+
         $cities = is_array($state['cities'] ?? null) ? $state['cities'] : [];
         usort($cities, fn ($a, $b) => strcasecmp((string) ($a['name'] ?? ''), (string) ($b['name'] ?? '')));
 
@@ -159,31 +245,31 @@ foreach ($countriesMeta as $meta) {
             if (! is_array($city)) {
                 continue;
             }
-            $cityName = trim((string) ($city['native'] ?? ''));
-            if ($cityName === '') {
-                $cityName = trim((string) ($city['name'] ?? ''));
-            }
-            if ($cityName === '') {
+            $cityEn = trim((string) ($city['name'] ?? ''));
+            $cityNative = trim((string) ($city['native'] ?? ''));
+            $cityLabel = $cityNative !== '' ? $cityNative : $cityEn;
+            if ($cityLabel === '') {
                 continue;
             }
-            $cityKey = uniqueKey(placeKey($cityName), $cityUsed);
+            $cityId = (int) ($city['id'] ?? 0);
+            $cityKey = uniqueKey(placeKey($cityLabel), $cityUsed);
             $packCities[] = [
                 'key' => $cityKey,
-                'name' => [$defaultLocale => $cityName],
+                'name' => buildPlaceNames($cityId, 'city', $cityEn, $cityNative, $defaultLocale, $trMap, $locales),
             ];
         }
 
         if ($packCities === []) {
             $packCities[] = [
                 'key' => $stateKey,
-                'name' => [$defaultLocale => $stateName],
+                'name' => $stateNames,
             ];
         }
 
         $citiesTotal += count($packCities);
         $packStates[] = [
             'key' => $stateKey,
-            'name' => [$defaultLocale => $stateName],
+            'name' => $stateNames,
             'cities' => $packCities,
         ];
     }
@@ -197,11 +283,11 @@ foreach ($countriesMeta as $meta) {
         'id' => $id,
         'iso2' => $iso2,
         'code' => $iso3,
-        'version' => '1.0.0',
+        'version' => $packVersion,
         'default_locale' => $defaultLocale,
         'notes' => [
-            'tr' => 'Bölge/eyalet + şehir (dr5hn). Ülke adı 11 dilde. Kaynak ODbL.',
-            'en' => 'States/regions + cities (dr5hn). Country name in 11 locales. ODbL source.',
+            'tr' => 'Bölge + şehir; adlar dr5hn çevirileri (11 dil) + native/en. ODbL.',
+            'en' => 'States + cities; names from dr5hn translations (11 locales) + native/en. ODbL.',
         ],
         'country' => [
             'name' => $meta['name'],
@@ -216,29 +302,25 @@ foreach ($countriesMeta as $meta) {
     }
 
     $locationsPath = $outDir.'/locations.json';
-    // Compact JSON (büyük ülkeler için boyut)
-    file_put_contents(
-        $locationsPath,
-        json_encode($pack, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)."\n"
-    );
+    file_put_contents($locationsPath, json_encode($pack, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)."\n");
     file_put_contents(
         $outDir.'/pack.json',
         json_encode([
             'id' => $id,
-            'version' => '1.0.0',
+            'version' => $packVersion,
             'iso2' => $iso2,
             'code' => $iso3,
         ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n"
     );
 
     $fileBytes = (int) filesize($locationsPath);
-    $estimateDisk = 4096 + (count($packStates) * 400) + ($citiesTotal * 450) + 2048;
+    $estimateDisk = 4096 + (count($packStates) * 400) + ($citiesTotal * 450) + ($citiesTotal * 200) + 2048;
 
     $generated[] = [
         'id' => $id,
         'iso2' => $iso2,
         'code' => $iso3,
-        'version' => '1.0.0',
+        'version' => $packVersion,
         'default_locale' => $defaultLocale,
         'path' => 'packs/'.$id.'/locations.json',
         'states_count' => count($packStates),
@@ -248,8 +330,7 @@ foreach ($countriesMeta as $meta) {
         'name' => $meta['name'],
     ];
 
-    $sizeMb = round($fileBytes / 1048576, 2);
-    echo "OK $iso2 states=".count($packStates)." cities=$citiesTotal size={$sizeMb}MB\n";
+    echo 'OK '.$iso2.' states='.count($packStates).' cities='.$citiesTotal.' size='.round($fileBytes / 1048576, 2)."MB\n";
 }
 
 $manifestPath = $root.'/manifest.json';
@@ -290,3 +371,13 @@ file_put_contents(
 );
 
 echo 'DONE packs='.count($ordered).' generated='.count($generated).PHP_EOL;
+
+// Hızlı doğrulama: UA Kharkiv
+$ua = json_decode((string) file_get_contents($root.'/packs/ua/locations.json'), true);
+foreach ($ua['states'] as $s) {
+    $en = $s['name']['en'] ?? '';
+    if (stripos($en, 'Kharkiv') !== false || stripos($en, 'Kharkov') !== false) {
+        echo 'SAMPLE Kharkiv en='.$en.' uk='.($s['name']['uk'] ?? '').' ru='.($s['name']['ru'] ?? '').PHP_EOL;
+        break;
+    }
+}
